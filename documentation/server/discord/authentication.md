@@ -223,7 +223,7 @@ export class AuthComponent {
   {:else}
   <p>
     Now you can press Alt + Tab to start the authentication process. <br>
-    Or simply click the RE - OPEN WINDOW to proceed.
+    Or simply click the RE - OPEN WINDOW to proceed.s
   </p>
   {/if}
   <button class="btn" on:click={handleAuth}>
@@ -238,6 +238,5 @@ export class AuthComponent {
 
 {% endtab %} {% endtabs %}
 
-{% hint style="success" %} Congrats you have now successfully setup discord authentication for your gamemode.
-{%endhint%}
+{% hint style="success" %} Congrats you have now successfully setup discord authentication. {% endhint %}
 
