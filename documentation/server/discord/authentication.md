@@ -178,9 +178,10 @@ export class AuthComponent {
 {% tabs %} {% tab title="Discord.svelte" %}
 
 ```html
+
 <script lang="ts">
-  import { onMount, onDestroy } from 'svelte';
-  import { AltVService } from '../../services';
+  import {onMount, onDestroy} from 'svelte';
+  import {AltVService} from '../../services';
 
   let isLoading: boolean = false;
 
@@ -216,27 +217,27 @@ export class AuthComponent {
 </script>
 
 <div>
-    <h1>Discord Authentication</h1>
+  <h1>Discord Authentication</h1>
+  {#if !isLoading}
+  <p>This allows you to play without any registration</p>
+  {:else}
+  <p>
+    Now you can press Alt + Tab to start the authentication process. <br>
+    Or simply click the RE - OPEN WINDOW to proceed.
+  </p>
+  {/if}
+  <button class="btn" on:click={handleAuth}>
     {#if !isLoading}
-    <p>This allows you to play without any registration</p>
+    Start Authentication
     {:else}
-    <p>
-        Now you can press Alt + Tab to start the authentication process. <br>
-        Or simply click the RE - OPEN WINDOW to proceed.
-    </p>
+    Re - Open Window
     {/if}
-    <button class="btn" on:click={handleAuth}>
-        {#if !isLoading}
-            Start Authentication
-        {:else}
-            Re - Open Window
-        {/if}
-    </button>
+  </button>
 </div>
 ```
 
 {% endtab %} {% endtabs %}
 
-{% hint style="success" %} Congrats you have now succesfully setup discord authentication for your gamemode. {% endhint
-%}
+{% hint style="success" %} Congrats you have now successfully setup discord authentication for your gamemode.
+{%endhint%}
 
