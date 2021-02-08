@@ -20,7 +20,7 @@
   * [Eventservice](documentation/server/eventservice.md)
   * [Discord](documentation/server/discord/README.md)
     * [Authentication](documentation/server/discord/authentication.md)
-    * [Bot](documentation/server/discord/untitled.md)
+    * [Bot](documentation/server/discord/bot.md)
     * [Guild Service](documentation/server/discord/guild-service.md)
 * [Client](documentation/client/README.md)
   * [Worker](documentation/client/worker.md)
