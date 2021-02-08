@@ -26,6 +26,7 @@
   * [Worker](documentation/client/worker.md)
   * [Services](documentation/client/services.md)
   * [Extended Entities](documentation/client/extended-entities.md)
+  * [Decorator](documentation/client/decorator.md)
 * [Shared](documentation/shared/README.md)
   * [Config](documentation/shared/config.md)
   * [Core Registry](documentation/shared/core-registry.md)
