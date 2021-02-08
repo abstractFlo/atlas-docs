@@ -27,7 +27,7 @@ Visit the **General Information** Page and store the **Client ID** and **Client 
 Go to OAuth 2 and setup the redirect url and press save.  
 This url must be set inside`environment.json` under `redirect_url` too.
 
-![Add Redirect URL](../../../.gitbook/assets/image%20%281%29.png)
+![Add Redirect URL](../../../.gitbook/assets/image%20%281%29%20%281%29%20%281%29.png)
 
 {% hint style="success" %}
 That's all for setup. The Framework does the rest for you.
