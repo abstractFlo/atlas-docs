@@ -8,7 +8,7 @@ description: Learn more about the di-container decorators
 
 ### @singleton
 
-If you want to get every time the same instance from your class, use the **@singleton** decorator
+If you want to have the same instance of the class every time, use the **@singleton** decorator.
 
 ```typescript
 @singleton()
@@ -23,7 +23,7 @@ resolve1 === resolve2;
 
 ### @injectable
 
-If you want to get every time a new instance from your class, use the **@injectable** decorator.
+If you want to have a new instance of the class every time, use the **@injectable** decorator.
 
 ```typescript
 @injectable()
@@ -38,7 +38,7 @@ resolve1 !== resolve2;
 
 ## Custom DI Decorators
 
-We created some custom decorators to interact with the di-container. This decorators are needed for internal work. The complete framework use many shared classes and helpers on both sides. This decorators helps us to connected the server and client with the shared classes.
+We created some custom decorators to interact with the di-container. This decorators are needed for internal work. The entire framework uses many shared classes and helpers on both sides. This decorators helps us to connect the server and client with the shared classes.
 
 {% hint style="danger" %}
 Every custom decorator must be declared after the tsyringe decorator
@@ -46,7 +46,7 @@ Every custom decorator must be declared after the tsyringe decorator
 
 ### @Module
 
-The **@Module** decorator is the most used custom decorator. This decorator handle all your other module imports and components. It combines the autoloading feature and **@StringResolver**
+The **@Module** decorator is the most used custom decorator. This decorator handles all your other module imports and components. It combines the autoloading feature and **@StringResolver**
 
 {% tabs %}
 {% tab title="index.ts" %}
@@ -92,13 +92,13 @@ export class SecondComponent{}
 {% endtabs %}
 
 {% hint style="success" %}
-The example above shows your the magic. Only one line of code for import. Resolve the module from container, autoload all other declared modules and components. This keep your code clean and nice.
+The example above shows you the magic. Only one line of code for import. Resolve the module from container, autoload all other declared modules and components. This keep your code clean and good looking.
 {% endhint %}
 
 ### @StringResolver
 
-The **@StringResolver** register the decorated class as an String InjectionToken inside the decorator.  
-This is needed if you want to resolve a class based on string constructor name
+The **@StringResolver** registers the decorated class as a String InjectionToken inside the decorator.  
+This is needed if you want to resolve a class based on the string constructor name
 
 {% hint style="info" %}
 This decorator is only needed, if you get errors on resolving your class. There are not many usecases.
