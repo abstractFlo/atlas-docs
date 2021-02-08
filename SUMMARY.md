@@ -25,7 +25,6 @@
 * [Client](documentation/client/README.md)
   * [Worker](documentation/client/worker.md)
   * [Services](documentation/client/services.md)
-  * [Decorator](documentation/client/decorator.md)
   * [Extended Entities](documentation/client/extended-entities.md)
 * [Shared](documentation/shared/README.md)
   * [Config](documentation/shared/config.md)
@@ -36,7 +35,6 @@
   * [Models](documentation/shared/models.md)
   * [Events](documentation/shared/events.md)
   * [JSON Entity Model](documentation/shared/json-entity-model.md)
-  * [Decorator](documentation/shared/decorator.md)
 
 ## External Links
 
