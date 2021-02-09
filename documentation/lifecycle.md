@@ -14,7 +14,7 @@ This lifecycle does not affect the alt:V lifecycle. They only help you perform a
 
 ## Loader
 
-We've created a Loaderservice to fit your needs for the lifecycle we want. Using the loader is recommended, and the setup is fairly easy. The only thing to do is, bootstrap your entry module, and the loader starts the magic.
+We've created a Loaderservice to fit our needs for the lifecycle we want. Using the loader is recommended, and the setup is fairly easy. The only thing to do is, bootstrap your entry module, and the loader starts the magic.
 
 {% hint style="info" %}
 This is available on the server and client side
@@ -138,8 +138,6 @@ class YourModule {
 ```
 
 {% hint style="info" %}
-You can push as much as you want on each queue step. You should only keep in mind, that any step would be call if the before step is finished and in this order: 
-`Sentence doesn't make sense`
-**@Before** -&gt; **@After** -&gt; **@AfterBootstrap**
+You can push as much as you want on each queue step. You should only keep in mind, that any step would be call if the before step is finished and in this order: `Sentence doesn't make sense` **@Before** -&gt; **@After** -&gt; **@AfterBootstrap**
 {% endhint %}
 

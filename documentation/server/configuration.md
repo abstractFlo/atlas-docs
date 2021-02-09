@@ -47,8 +47,7 @@ The base configuration is our minimal setup for running all the framework stuff.
 Getting a parameter from the config file is fairly simple. Use the power of Dependency Injection, and you're ready to go.
 
 {% hint style="warning" %}
-Nested elements would be get by separate the child with a dot
-`Incorrect Sentence`
+Nested elements would be get by separate the child with a dot `Incorrect Sentence`
 {% endhint %}
 
 ```javascript
