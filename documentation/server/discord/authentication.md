@@ -6,18 +6,18 @@ description: Learn more about Discord Authentication
 
 ## Introduction
 
-Using discord as authentication layer, is fearly simple. There a a few simple steps to integrate this nice feature in
+Using discord as authentication layer, is fairly simple. There're a few simple steps to integrate this nice feature into
 your gamemode.
 
-{% hint style="warning" %} Keep in mind, authentication with discord, has nothing to do with a whitelist or something.
-It only check if the user has a Discord Account and valid credentials. {% endhint %}
+{% hint style="warning" %} Keep in mind, authentication with Discord, has nothing to do with a whitelist or something.
+It only checks if the user has a Discord Account with valid credentials. {% endhint %}
 
 ## Installation
 
 #### Step 1
 
 Go to [https://discord.com/developers/applications](https://discord.com/developers/applications) and create an account
-and application it not already exists
+and application if not already exists
 
 #### Step 2
 
@@ -25,26 +25,26 @@ Visit the **General Information** Page and store the **Client ID** and **Client 
 
 #### Step 3
 
-Go to OAuth 2 and setup the redirect url and press save.  
-This url must be set inside`environment.json` under `redirect_url` too.
+Go to OAuth 2 and setup the redirect URL and press save.  
+This URL must be set inside `environment.json` under `redirect_url` too.
 
 ![Add Redirect URL](../../../.gitbook/assets/discord/authorization_redirect.png)
 
-{% hint style="success" %} That's all for setup. The Framework does the rest for you. {% endhint %}
+{% hint style="success" %} That's all for Setup. The Framework does the rest for you. {% endhint %}
 
 ## Example Usage
 
-This is a simple integration inside the connection process for your gamemode. You must be familiar with the setup. This
-example does not explain the very begining part for creating components. Only the needed components. Any kind of code
-can modify to fit your needs.
+This is a simple integration inside the connection process for your Gamemode. You must be familiar with the setup. This
+example does not explain the very basic part for creating components. Only the needed components. Any kind of code
+can modify to fit your own needs.
 
-{% hint style="warning" %} This section describe the usage of our products on each side. This mean our framework for
+{% hint style="warning" %} This section describes the usage of our products on each side. This means our framework for
 server/client and [our CEF implementation with svelte](https://github.com/abstractFlo/altv-svelte-tailwind-typescript).
-If you have a different setup on CEF side, you can port the svelte part to your needs {% endhint %}
+If you have a different setup on CEF side, you can port the Svelte part to your preferred solution. {% endhint %}
 
 ### Server
 
-{% hint style="info" %} This is the server side integration for discord authentication {% endhint %}
+{% hint style="info" %} This is the Server side integration for Discord authentication {% endhint %}
 
 {% tabs %} {% tab title="auth.component.ts" %}
 
@@ -83,7 +83,7 @@ export class AuthComponent {
   }
 
   /**
-   * Find player by discord token and emit event to player if true
+   * Find player by their Discord token and emit event to Player if true
    *
    * @param {string} token
    * @param {DiscordUserModel} discordUser
@@ -110,7 +110,7 @@ export class AuthComponent {
 
 ### Client
 
-{% hint style="info" %} Client side integration for discord authentication {% endhint %}
+{% hint style="info" %} Client side integration for Discord authentication {% endhint %}
 
 {% tabs %} {% tab title="auth.component.ts" %}
 
@@ -135,7 +135,7 @@ export class AuthComponent {
   ) {}
 
   /**
-   * Store the given discord auth url
+   * Store the given Discord auth URL
    *
    * @param {string} authUrl
    */
@@ -150,7 +150,7 @@ export class AuthComponent {
   }
 
   /**
-   * Return the discord url to webview
+   * Return the Discord URL to webview
    */
   @OnGui('discordOpenUrl')
   public getDiscordOpenUrl(): void {
@@ -193,7 +193,7 @@ export class AuthComponent {
   });
 
   /**
-   * Remove eventlistener if component is destroyed
+   * Remove Eventlistener if component is destroyed
    */
   onDestroy(() => {
     AltVService.off('discordOpenUrl', processWindowOpen);
@@ -208,7 +208,7 @@ export class AuthComponent {
   }
 
   /**
-   * Send the request to client for get the auth url
+   * Send the request to client for get the auth URL
    */
   function handleAuth(): void {
     isLoading = !isLoading;
@@ -238,5 +238,5 @@ export class AuthComponent {
 
 {% endtab %} {% endtabs %}
 
-{% hint style="success" %} Congrats you have now successfully setup discord authentication. {% endhint %}
+{% hint style="success" %} Congrats you have now successfully setup Discord authentication. {% endhint %}
 
