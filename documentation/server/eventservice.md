@@ -6,10 +6,10 @@ description: Learn more about the Eventservice
 
 ## Introduction
 
-Sending events is a key feature for each gamemode. This service will help you archive this goal.
+Sending events is a key feature for each Gamemode. This service will help you archive this goal.
 
 {% hint style="info" %}
-Keep in mind, our eventservice is a wrapper around the alt:V Eventsystem. If you want, you can use the way how alt:V provides it with **alt.emit**, **alt.emitClient** and so on. But in a clean code scenario, it would be better to use the eventService to keep your code clean and structured.
+Keep in mind, our Eventservice is a wrapper around the alt:V Eventsystem. If you want, you can use it the way alt:V provides it with **alt.emit**, **alt.emitClient** and so on. But in a clean code scenario, it would be better to use the eventService to keep your code clean and structured.
 {% endhint %}
 
 ## Base Usage
@@ -60,7 +60,7 @@ export class MyComponent {
 
 ## Special Usage
 
-In our own gamemode, from time to time we need this feature, to send data directly to player GUI without the annoying part for create double code on clientside to only send data to GUI. This method will help you to solve this problem.
+In our own Gamemode, from time to time we need this feature, to send data directly to player GUI without the annoying part for create double code on Clientside to only send data to GUI. This method will help you to solve this problem.
 
 {% hint style="info" %}
 Internal we use the client as a bridge. There is no magic, only an event that retrieves the data and send it to the GUI itself.
@@ -93,7 +93,7 @@ export class MyComponent {
 
 ## Side Notes
 
-The eventservice also has methods for retrieving events. But if you're using the decorators, there is no need to use them. But for the sake of completeness.
+The Eventservice also has methods for retrieving events. But if you're using the decorators, there is no need to use them. But for the sake of completeness, they're included.
 
 {% tabs %}
 {% tab title="on" %}

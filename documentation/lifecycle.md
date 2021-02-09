@@ -6,7 +6,7 @@ description: Learn more about the Lifecycle
 
 ## Introduction
 
-There are many scenarios, where you want to wait for thea method to be completed before starting another one. That's why we create a custom lifecycle system for booting up the framework. In simple words, the lifecycle is kind of a queue, where each decorator runs after each other in a particular order.
+There are many scenarios, where you want to wait for the method to be completed before starting another one. That's why we create a custom lifecycle system for booting up the framework. In simple words, the lifecycle is kind of a queue, where each decorator runs after each other in a particular order.
 
 {% hint style="warning" %}
 This lifecycle does not affect the alt:V lifecycle. They only help you perform a different task on different steps.
@@ -41,7 +41,7 @@ loader
     .bootstrap(ClientModule)
     .afterComplete(() => {
         // This method is called, if the lifecycle is finished
-        // You can send a event to server to inform the player is ready
+        // You can send an event to server to inform the player is ready
         // Example:
         UtilsService.log('~lg~Booting complete => ~w~Happy Playing');
         const eventService = container.resolve(EventService);
@@ -52,7 +52,7 @@ loader
 {% endtabs %}
 
 {% hint style="success" %}
-You don't need to load up other modules. Keep in mind, the available decorators does this for you.
+You don't need to load up other modules. Keep in mind, the available decorators do this for you.
 {% endhint %}
 
 ## Available Decorators

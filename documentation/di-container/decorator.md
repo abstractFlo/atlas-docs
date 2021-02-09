@@ -38,7 +38,7 @@ resolve1 !== resolve2;
 
 ## Custom DI Decorators
 
-We created some custom decorators to interact with the di-container. This decorators are needed for internal work. The entire framework uses many shared classes and helpers on both sides. This decorators helps us to connect the server and client with the shared classes.
+We created some custom decorators to interact with the di-container. This decorators are needed for internal work. The entire framework uses many shared classes and helpers on both sides. The decorators help us to connect the server and client with the shared classes.
 
 {% hint style="danger" %}
 Every custom decorator must be declared after the tsyringe decorator

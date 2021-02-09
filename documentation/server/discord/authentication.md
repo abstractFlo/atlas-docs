@@ -17,7 +17,7 @@ It only checks if the user has a Discord Account with valid credentials. {% endh
 #### Step 1
 
 Go to [https://discord.com/developers/applications](https://discord.com/developers/applications) and create an account
-and application if not already exists
+and application if you don't already have one.
 
 #### Step 2
 
@@ -36,7 +36,7 @@ This URL must be set inside `environment.json` under `redirect_url` too.
 
 This is a simple integration inside the connection process for your Gamemode. You must be familiar with the setup. This
 example does not explain the very basic part for creating components. Only the needed components. Any kind of code
-can modify to fit your own needs.
+can be modified to fit your own needs.
 
 {% hint style="warning" %} This section describes the usage of our products on each side. This means our framework for
 server/client and [our CEF implementation with svelte](https://github.com/abstractFlo/altv-svelte-tailwind-typescript).

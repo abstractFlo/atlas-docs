@@ -10,14 +10,14 @@ Integrate a Discord Bot to your gamemode can have some benefits for you. Creatin
 permission layer from Discord itself for in-game actions, read some server stats, kick players and so on. The list can go
 further.
 
-{% hint style="info" %} Creating your own bot cannot be simpler as this. {% endhint %}
+{% hint style="info" %} Creating your own bot cannot be simpler than this. {% endhint %}
 
 ## Setup the Bot
 
 ### Step 1
 
 Go to [https://discord.com/developers/applications](https://discord.com/developers/applications) and create an account
-and application if not already existent.
+and application if you do not already have on.
 
 ### Step 2
 
@@ -31,7 +31,7 @@ Store the Bot Token inside your `environment.json` and set it up based on the pi
 
 ### Step 4
 
-Generate an OAuth URL and setup permissions for your bot, copy / paste it to your browser and invite him to your Server.
+Generate an OAuth URL and setup permissions for your bot, copy / paste it into your browser and invite The Bot to your Server.
 
 ![We prefer to check only the permissions you really want](../../../.gitbook/assets/discord/permissions_oauth.png)
 
