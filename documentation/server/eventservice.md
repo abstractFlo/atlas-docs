@@ -2,7 +2,7 @@
 description: Learn more about the Eventservice
 ---
 
-# Eventservice
+# Event Service
 
 ## Introduction
 

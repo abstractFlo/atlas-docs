@@ -47,3 +47,9 @@ public youAwesomMethod(player: Player): void {
 {% endtab %}
 {% endtabs %}
 
+## Colshape Decorator
+
+If you want using colshapes in your gamemode, that can be frustrate you every time if you want to check which entity is in, if any entity enter or leave the colshape and many more usecases. That's why we create this decorators. Working with colshapes was never easier before.
+
+ 
+
