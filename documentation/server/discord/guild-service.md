@@ -6,18 +6,18 @@ description: Learn more about the guild service
 
 ## Introduction
 
-If you want to interact with your Discord Bot, it is needed to retrieve your server from the Guild cache. This needs to be fetch the guild by your server id. This can be anoying if you do this ever and ever. This why we create the Guildservice for you. At this time of writing the docs, there are only one feature inside the service. Grab your guild. Over the time, the service would be increase by more features and ideas.
+If you want to interact with your Discord Bot, it is needed to retrieve your server from the Guild cache. It is needed to fetch the guild by your server id. This can be annoying if you do this over and over again. That's why we created the Guildservice for you. At this time of writing the docs, there's only one feature inside the service. Grab your guild. Over the time, the service will be increased by more features and ideas.
 
 {% hint style="warning" %}
-Wishes and ideas can be posted inside \#ideas-features channel on our discord
+Wishes and ideas can be posted inside \#ideas-features channel in our Discord
 {% endhint %}
 
 ## Basic Usage
 
-Working with the guildservice is fearly simple. Create a new class and extend the guildservice.
+Working with the Guildservice is fairly simple. Create a new class and extend the Guildservice.
 
 {% hint style="success" %}
-You can use any method you found on [discord.js](https://discord.js.org/#/docs/main/stable/general/welcome) documentation. The this.guild is only a wrapper for your own guild.
+You can use any method you find in the [discord.js](https://discord.js.org/#/docs/main/stable/general/welcome) documentation. The `this.guild` is only a wrapper for your own guild.
 {% endhint %}
 
 {% tabs %}

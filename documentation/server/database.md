@@ -7,15 +7,15 @@ description: Learn more about the Database
 ## Introduction
 
 Our Framework has support for a wide range of database systems. This is provided by [TypeORM](https://typeorm.io/#/).  
-The DatabaseService is ready to use for your gamemode. Setup your credentials inside the environment.json and start using the service.
+The DatabaseService is ready to use for your gamemode. Setup your credentials inside the `environment.json` and start using the service.
 
 {% hint style="warning" %}
-We don't teach you the interaction and creation for databases. If you have any questions about database basics, consult the [docs](https://typeorm.io/#/).
+We don't teach you the interaction and creation of databases. If you have any questions about database basics, consult the [docs](https://typeorm.io/#/).
 {% endhint %}
 
 ## How to use
 
-Using the DatabaseService is fairly simple. Only bootstrap the service and you are ready to go.
+Using the DatabaseService is fairly simple. Only bootstrap the service and you're ready to go.
 
 ```typescript
 @Module()
@@ -47,6 +47,6 @@ export class ServerModule {
 ```
 
 {% hint style="success" %}
-If you're not familiar at TypeORM yet, feel free to check out our sample gamemode and see how we use it.
+If you're not familiar with TypeORM yet, feel free to check out our sample gamemode and see how we use it.
 {% endhint %}
 

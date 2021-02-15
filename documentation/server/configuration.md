@@ -9,12 +9,12 @@ description: Learn more about Configuration
 We create a very small and simple to use configuration service. This service would be used inside the framework, but if you want, you can use it too.
 
 {% hint style="info" %}
-We are not do any fancy magic stuff here. Thanks goes [`Lodash`](https://lodash.com/)
+We are not do any fancy magic stuff here. Thanks go to [`Lodash`](https://lodash.com/)
 {% endhint %}
 
 ## Base Configuration
 
-The base configuration is our minimal setup for running all the framework stuff. Keep in mind, if you not using like discord, don't remove the params. They not used but to prevent compile errors on your side, it would be better to let them stay.
+The base configuration is our minimal setup for running all the framework stuff. Keep in mind, if you're not using Discord, don't remove the params. They're not used but to prevent compile errors on your side, it would be better to let them stay.
 
 ```javascript
 {
@@ -44,10 +44,10 @@ The base configuration is our minimal setup for running all the framework stuff.
 
 ## Get Config Parameter
 
-Getting a parameter from the config file is fearly simple. Use the power of Dependency Injection and you are ready to go.
+Getting a parameter from the config file is fairly simple. Use the power of Dependency Injection, and you're ready to go.
 
 {% hint style="warning" %}
-Nested elements would be get by separate the child with an dot
+Nested elements would be get by separate the child with a dot `Incorrect Sentence`
 {% endhint %}
 
 ```javascript
@@ -66,7 +66,7 @@ export class MyComponent {
 }
 ```
 
-You can retrieve a config value with all nested elements if you want
+You can retrieve a config value with all nested elements if you require it
 
 ```javascript
 export class MyComponent {
@@ -84,7 +84,7 @@ export class MyComponent {
 }
 ```
 
-In some case, you want to get a default value, if your needed param is empty or does not exists
+In some cases, you want to get the default value, if your needed param is empty or does not exist.
 
 ```javascript
 export class MyComponent {
@@ -123,6 +123,6 @@ export class MyComponent {
 ```
 
 {% hint style="info" %}
-Keep in mind, nesting works also too. You can nest your params as deep as you want, the ConfigService is handle all for you.
+Keep in mind, nesting works too. You can nest your params as deep as you want, the ConfigService will handle it all for you.
 {% endhint %}
 
