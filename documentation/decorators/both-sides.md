@@ -24,7 +24,7 @@ export class YourModule {}
 
 {% hint style="info" %}
 Every basic event decorator has an optional parameter for the eventname  
-If the eventname is not provided within the parameter, the name from decorated method will be used as the eventname.
+If the eventname is not provided within the parameter, the name of the decorated method will be used as the eventname.
 {% endhint %}
 
 {% tabs %}
@@ -68,7 +68,7 @@ Avoid using multiple commands with same name. Only the first registered command 
 ### Basic Usage
 
 {% hint style="warning" %}
-The first parameter is optional. If it is not provided, the method name will be used as command name.
+The first parameter is optional. If the parameter is not provided, the method name will be used as command name.
 {% endhint %}
 
 ```typescript
@@ -85,7 +85,7 @@ public world(): void {
 
 ### Example
 
-This example shows you the simple usage of this awesome decorator. The way they work is the same on both sides. The example shows up a simple vehicle create command on server side.
+This example shows the simple usage of this awesome decorator. The way they work is the same on both sides. This example shows a simple vehicle create command on server side.
 
 ```typescript
 @Cmd('veh')
