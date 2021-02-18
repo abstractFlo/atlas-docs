@@ -17,7 +17,7 @@
   * [Configuration](documentation/server/configuration.md)
   * [Database](documentation/server/database.md)
   * [Encryption](documentation/server/encryption.md)
-  * [Eventservice](documentation/server/eventservice.md)
+  * [Event Service](documentation/server/eventservice.md)
   * [Discord](documentation/server/discord/README.md)
     * [Authentication](documentation/server/discord/authentication.md)
     * [Bot](documentation/server/discord/bot.md)
