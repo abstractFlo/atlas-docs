@@ -57,36 +57,54 @@ You don't need to load up other modules. Keep in mind, the available decorators 
 
 ## Available Decorators
 
+The done callback has a duration within **5000ms**. If your task not over in this time, the console would show you some informations about.
+
+{% hint style="warning" %}
+You can increase this time, by adding as argument to decorator
+{% endhint %}
+
 {% tabs %}
-{% tab title="@Before" %}
+{% tab title="@Before\(\)" %}
 ```typescript
-@Before
-public heavyTask(done: CallableFunction): void {
+@Before()
+public task(done: CallableFunction): void {
     setTimeout(() => {
         done();
-    }, 10000)
+    }, 5000)
 }
 ```
 {% endtab %}
 
-{% tab title="@After" %}
+{% tab title="@After\(\)" %}
 ```typescript
-@After
-public heavyTask(done: CallableFunction): void {
+@After()
+public task(done: CallableFunction): void {
     setTimeout(() => {
         done();
-    }, 10000)
+    }, 5000)
 }
 ```
 {% endtab %}
 
-{% tab title="@AfterBootstrap" %}
+{% tab title="@AfterBootstrap\(\)" %}
 ```typescript
-@AfterBootstrap
+@AfterBootstrap()
+public task(done: CallableFunction): void {
+    setTimeout(() => {
+        done();
+    }, 5000)
+}
+```
+{% endtab %}
+
+{% tab title="@Before\(\) with higher duration time" %}
+```typescript
+// The done callback must be called within 25000ms
+@Before(25000)
 public heavyTask(done: CallableFunction): void {
     setTimeout(() => {
         done();
-    }, 10000)
+    }, 20000)
 }
 ```
 {% endtab %}
@@ -94,7 +112,7 @@ public heavyTask(done: CallableFunction): void {
 
 ## Example
 
-This is not the best
+### NEU ÜBERLEGEN WAS WIR HIER MACHEN!!!!
 
 ```typescript
 class YourModule {
