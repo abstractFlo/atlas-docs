@@ -9,7 +9,7 @@ description: Learn more about the Eventservice
 Sending events is a key feature for each gamemode. This service will help you archive this goal.
 
 {% hint style="info" %}
-Keep in mind, our event service is a wrapper around the alt:V event system. If you want, you can use it the way alt:V provides it with **alt.emit**, **alt.emitClient** and so on. In a clean code scenario, it would be better to use the eventService to keep your code clean and structured.
+Keep in mind, our event service is a wrapper around the alt:V event system. If you want, you can use it the way alt:V provides it with **alt.emit**, **alt.emitServer** and so on. In a clean code scenario, it would be better to use the eventService to keep your code clean and structured.
 {% endhint %}
 
 ## Base Usage
@@ -25,7 +25,7 @@ export class MyComponent {
         private readonly eventService: EventService
     ) {}
 
-    // Emit event to server
+    // Emit event to client
     public yourMethod(): void {
         this.eventService.emit('eventName', 'data1', 'data2', 'data3')
     }
@@ -34,7 +34,7 @@ export class MyComponent {
 ```
 {% endtab %}
 
-{% tab title="emitClient" %}
+{% tab title="emitServer" %}
 ```typescript
 export class MyComponent {
 
@@ -42,49 +42,11 @@ export class MyComponent {
         private readonly eventService: EventService
     ) {}
 
-    // Send event to all players
+    // Send event to server
     public yourMethod(): void {
-        this.eventService.emitClient(null, 'eventName', 'data1', 'data2', 'data3')
+        this.eventService.emitServer('eventName', 'data1', 'data2', 'data3')
     }
 
-    // Send event to specific player
-    public yourMethod(): void {
-        const player = Player.getByID(1);
-        this.eventService.emitClient(player, 'eventName', 'data1', 'data2')
-    }
-
-}
-```
-{% endtab %}
-{% endtabs %}
-
-## Special Usage
-
-In our own gamemode we need the following feature to send data directly to the player's GUI without the annoying part of creating redundant code on clientside to pass data to GUI. This method will help you to solve this problem.
-
-{% hint style="info" %}
-Internally, we use the client as a bridge. There is no magic, only an event that retrieves the data and send it to the GUI itself.
-{% endhint %}
-
-{% tabs %}
-{% tab title="emitGui" %}
-```typescript
-export class MyComponent {
-
-    constructor(
-        private readonly eventService: EventService
-    ) {}
-
-    // Send event to all players gui
-    public yourMethod(): void {
-        this.eventService.emitGui(null, 'eventName', 'data1', 'data2', 'data3')
-    }
-
-    // Send event to specific player gui
-    public yourMethod(): void {
-        const player = Player.getByID(1);
-        this.eventService.emitGui(player, 'eventName', 'data1', 'data2')
-    }
 
 }
 ```
@@ -126,14 +88,14 @@ export class MyComponent {
 ```
 {% endtab %}
 
-{% tab title="onClient" %}
+{% tab title="onServer" %}
 ```typescript
 export class MyComponent {
 
     constructor(
         private readonly eventService: EventService
     ) {
-        this.eventService.onClient('event', (player: Player, ...args: any[]) => {
+        this.eventService.onServer('event', (...args: any[]) => {
             // Do you stuff
         })
     }
@@ -141,14 +103,14 @@ export class MyComponent {
 ```
 {% endtab %}
 
-{% tab title="onceClient" %}
+{% tab title="onceServer" %}
 ```typescript
 export class MyComponent {
 
     constructor(
         private readonly eventService: EventService
     ) {
-        this.eventService.onceClient('event', (player: Player, ...args: any[]) => {
+        this.eventService.onceServer('event', (...args: any[]) => {
             // Do you stuff
         })
     }
