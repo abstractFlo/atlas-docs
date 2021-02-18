@@ -31,10 +31,10 @@
   * [Extends](documentation/client/extended-entities.md)
 * [Shared](documentation/shared/README.md)
   * [Constants](documentation/shared/constants.md)
-  * [Services](documentation/shared/services.md)
-  * [Base Pool](documentation/shared/pools.md)
-  * [Events](documentation/shared/events.md)
   * [JSON Entity Model](documentation/shared/json-entity-model.md)
+  * [Base Pool](documentation/shared/pools.md)
+  * [LoggerService](documentation/shared/loggerservice.md)
+  * [UtilsService](documentation/shared/utilsservice.md)
 
 ## External Links
 
