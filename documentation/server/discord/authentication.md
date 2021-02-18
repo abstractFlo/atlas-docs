@@ -9,7 +9,7 @@ description: Learn more about Discord Authentication
 Using discord as authentication layer, is fairly simple. There're a few simple steps to integrate this nice feature into your gamemode.
 
 {% hint style="warning" %}
-Keep in mind, authentication with Discord, has nothing to do with a whitelist or something. It only checks if the user has a Discord Account with valid credentials.
+Keep in mind, authentication with Discord, has nothing to do with a whitelist or something. It only checks if the user owns a Discord Account with valid credentials.
 {% endhint %}
 
 ## Installation
@@ -24,7 +24,7 @@ Visit the **General Information** Page and store the **Client ID** and **Client 
 
 #### Step 3
 
-Go to OAuth 2 and setup the redirect URL and press save.  
+Go to OAuth 2 and set up the redirect URL and press save.  
 This URL must be set inside `environment.json` under `redirect_url` too.
 
 ![Add Redirect URL](../../../.gitbook/assets/authorization_redirect.png)
@@ -35,7 +35,7 @@ That's all for Setup. The Framework does the rest for you.
 
 ## Example Usage
 
-This is a simple integration inside the connection process for your Gamemode. You must be familiar with the setup. This example does not explain the very basic part for creating components. Only the needed components. Any kind of code can be modified to fit your own needs.
+This is a simple integration inside the connection process for your gamemode. You must be familiar with the setup. This example does not explain the very basic part for creating components. Only the needed components. Any kind of code can be modified to fit your own needs.
 
 {% hint style="warning" %}
 This section describes the usage of our products on each side. This means our framework for server/client and [our CEF implementation with svelte](https://github.com/abstractFlo/altv-svelte-tailwind-typescript). If you have a different setup on CEF side, you can port the Svelte part to your preferred solution.
@@ -177,7 +177,7 @@ export class AuthComponent {
 ### Gui/CEF
 
 {% hint style="warning" %}
-This implementation is only the very basic setup. No styles, no layouts.
+This implementation is only a very basic setup. No styles, no layouts.
 {% endhint %}
 
 {% tabs %}

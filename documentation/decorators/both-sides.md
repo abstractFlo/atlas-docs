@@ -23,8 +23,8 @@ export class YourModule {}
 ## Basic Event Decorator
 
 {% hint style="info" %}
-Every basic event decorator can have an parameter for the eventname to be listen  
-If not provided, the name from decorated method would be use as eventname.
+Every basic event decorator has an optional parameter for the eventname  
+If the eventname is not provided within the parameter, the name of the decorated method will be used as the eventname.
 {% endhint %}
 
 {% tabs %}
@@ -59,16 +59,16 @@ public doSomeMagicStuff(): void {
 
 ## Command Decorator
 
-Creating sever console commands was not time easier before. You don't need to create or listen for specific event. Only this decorator is needed.
+Creating sever console commands was not time easier before. You don't need to create them or listen to specific events. Only this decorator is needed.
 
 {% hint style="warning" %}
-Avoid using multiple commands with same name. Only the first registered command would be use.
+Avoid using multiple commands with same name. Only the first registered command will be handled.
 {% endhint %}
 
 ### Basic Usage
 
 {% hint style="warning" %}
-The first param is optional, if not provided, the method name would be used as command name.
+The first parameter is optional. If the parameter is not provided, the method name will be used as command name.
 {% endhint %}
 
 ```typescript
@@ -85,7 +85,7 @@ public world(): void {
 
 ### Example
 
-This example shows you the simple usage of this awesome decorator. The way they work is the same on both sides. The Example shows up a simple vehicle create command on server side.
+This example shows the simple usage of this awesome decorator. The way they work is the same on both sides. This example shows a simple vehicle create command on server side.
 
 ```typescript
 @Cmd('veh')
@@ -105,7 +105,7 @@ public createVehicle(name: string): void {
         rot.z
     );
 
-    vehicle.numberPlateText = 'MyCar'
+    vehicle.numberPlateText = 'MyCar';
 }
 ```
 
