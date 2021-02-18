@@ -51,5 +51,57 @@ public youAwesomMethod(player: Player): void {
 
 If you want using colshapes in your gamemode, that can be frustrate you every time if you want to check which entity is in, if any entity enter or leave the colshape and many more usecases. That's why we create this decorators. Working with colshapes was never easier before.
 
- 
+{% hint style="info" %}
+Only the first parameter is needed for identify the triggered colShape. If you would get more specific, you can set the name and the triggered entity type.
+{% endhint %}
+
+{% tabs %}
+{% tab title="@EntityEnterColShape" %}
+```typescript
+
+// Would be triggered if colshape is cylinder with name myColShape 
+// and the entity is a player
+@EntityEnterColShape(ColShapeType.Cylinder, 'myColShape', BaseObjectType.Player)
+public testEnter1(colshape: Colshape, entity: Entity): void {
+  console.log('cylinder, myColShape, player');
+}
+
+// Would be triggered if colshape is cylinder with name myColShape
+@EntityEnterColShape(ColShapeType.Cylinder, 'myColShape')
+public testEnter2(colshape: Colshape, entity: Entity): void {
+  console.log('cylinder, myColShape');
+}
+
+// Would be triggered if colshape is cylinder
+@EntityEnterColShape(ColShapeType.Cylinder)
+public testEnter3(colshape: Colshape, entity: Entity): void {
+  console.log('cylinder');
+}
+```
+{% endtab %}
+
+{% tab title="@EntityLeaveColShape" %}
+```typescript
+
+// Would be triggered if colshape is cylinder with name myColShape 
+// and the entity is a player
+@EntityLeaveColShape(ColShapeType.Cylinder, 'myColShape', BaseObjectType.Player)
+public testLeave1(colshape: Colshape, entity: Entity): void {
+  console.log('cylinder, myColShape, player');
+}
+
+// Would be triggered if colshape is cylinder with name myColShape
+@EntityLeaveColShape(ColShapeType.Cylinder, 'myColShape')
+public testLeave2(colshape: Colshape, entity: Entity): void {
+  console.log('cylinder, myColShape');
+}
+
+// Would be triggered if colshape is cylinder
+@EntityLeaveColShape(ColShapeType.Cylinder)
+public testLeave3(colshape: Colshape, entity: Entity): void {
+  console.log('cylinder');
+}
+```
+{% endtab %}
+{% endtabs %}
 

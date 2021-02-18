@@ -17,6 +17,10 @@ We don't teach you the interaction and creation for databases. If you have any q
 
 Using the DatabaseService is fairly simple. Only add database entities and the service is starting for you.
 
+{% hint style="warning" %}
+If you don't need a database, remove **setupServerDatabaseEntities** from **bootstrap.ts**
+{% endhint %}
+
 {% tabs %}
 {% tab title="index.ts" %}
 ```typescript
@@ -55,7 +59,7 @@ export class ExampleComponent {
   public loadAll(): void {
     this.exampleService
       .loadAll()
-      .then((yourEntities: YourEntities[]) => {
+      .then((yourEntities: YourEntity[]) => {
         // Do whatever you want
       })
       .catch((err) => {
@@ -86,7 +90,7 @@ export class ExampleComponent {
 {% tab title="example.service.ts" %}
 ```typescript
 import { injectable } from 'tsyringe';
-import { YourEntity } from './user.entity';
+import { YourEntity } from './your.entity';
 import { getRepository, Repository } from 'typeorm';
 
 @injectable()
@@ -95,18 +99,18 @@ export class ExampleService {
   /**
    * Get repository
    *
-   * @type {Repository<YourEntity >}
+   * @type {Repository<YourEntity>}
    * @protected
    */
-  private repo: Repository<YourEntity > = getRepository(YourEntity );
+  private repo: Repository<YourEntity> = getRepository(YourEntity);
 
 
   /**
    * Return all entries
    *
-   * @return {Promise<YourEntity []>}
+   * @return {Promise<YourEntity[]>}
    */
-  public getAll(): Promise<YourEntity []> {
+  public getAll(): Promise<YourEntity[]> {
     return this.repo.find();
   }
   
