@@ -1,6 +1,6 @@
-# Easy to use json to model casting
+# JSON Entity Model
 
-### Callback and @Cast config definitions
+## Callback and @Cast config definitions
 
 ```typescript
 export type CastCallback = (currentValue?: any, jsonObject?: any) => any;
@@ -14,15 +14,15 @@ export interface CastConfig {
 }
 ```
 
-### Predefined helper functions
+## Predefined helper functions
 
-- isNull()
-- castToBoolean(trueValue: any = '1')
-- castBooleanToString(trueValue: any = '1', falseValue: any = '0')
-- castToNumber(keepNull = true)
-- castToString(keepNull = true)
+* isNull\(\)
+* castToBoolean\(trueValue: any = '1'\)
+* castBooleanToString\(trueValue: any = '1', falseValue: any = '0'\)
+* castToNumber\(keepNull = true\)
+* castToString\(keepNull = true\)
 
-### General @Cast usage
+## General @Cast usage
 
 ```typescript
 class UserModel extends JsonEntityModel {
@@ -70,7 +70,7 @@ const user2 = new UserModel().cast(
 );
 ```
 
-### Using @HasOne decorators
+## Using @HasOne decorators
 
 ```typescript
 class LocationModel extends JsonEntityModel {
@@ -99,7 +99,7 @@ const user = new UserModel().cast({
 });
 ```
 
-### Using @HasMany decorators
+## Using @HasMany decorators
 
 ```typescript
 class BookModel extends JsonEntityModel {
@@ -119,3 +119,4 @@ const author = new AuthorModel().cast({
   books: [{ isbn: '9780345404473' }, { isbn: '9780679740667' }]
 });
 ```
+

@@ -46,8 +46,8 @@ The base configuration is our minimal setup to run all the framework stuff. Keep
 
 Getting a parameter from the config file is quite simple. Use the power of Dependency Injection, and you're ready to go.
 
-{% hint style="warning" %}
-You can get nested elements by separate the child with a dot `Incorrect Sentence`
+{% hint style="success" %}
+You can get nested elements by separate the child with a dot.
 {% endhint %}
 
 ```javascript
@@ -66,7 +66,9 @@ export class MyComponent {
 }
 ```
 
-You can retrieve a config value with all nested elements if you require it
+{% hint style="success" %}
+You can retrieve a config value with all nested elements if you require it.
+{% endhint %}
 
 ```javascript
 export class MyComponent {
@@ -84,7 +86,9 @@ export class MyComponent {
 }
 ```
 
+{% hint style="success" %}
 In some cases, you want to get the default value. For example, your required param is empty or does not exist.
+{% endhint %}
 
 ```javascript
 export class MyComponent {
@@ -104,24 +108,22 @@ export class MyComponent {
 
 ## Set Config Parameter
 
-It is possible, to create your own parameters or complete objects if you want. To prevent overriding the required base configuration, your custom configuration is stored inside its own scope. They are automatically merged, if you want to get a value from the config service.\`\`\`javascript export class MyComponent {
+It is possible, to create your own parameters or complete objects if you want. To prevent overriding the required base configuration, your custom configuration is stored inside its own scope. They are automatically merged, if you want to get a value from the config service.
 
-```text
-// Load with dependency injection
-constructor(
-    private readonly configService: ConfigService
-) {}
-
-// Work with the resolved class
-public yourMethod(): void {
-    this.configservice.set('hello', 'world');
-    // now you have create an config key 'hello' with the value 'world'
+```typescript
+export class MyComponent {
+    // Load with dependency injection
+    constructor(
+        private readonly configService: ConfigService
+    ) {}
+    
+    // Work with the resolved class
+    public yourMethod(): void {
+        this.configservice.set('hello', 'world');
+        // now you have create an config key 'hello' with the value 'world'
+    }
 }
 ```
-
-}
-
-\`\`\`
 
 {% hint style="info" %}
 Keep in mind, nesting works too. You can nest your params as deep as you want, the ConfigService will handle it all for you.

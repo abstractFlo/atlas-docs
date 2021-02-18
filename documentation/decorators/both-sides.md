@@ -67,7 +67,7 @@ Avoid using multiple commands with same name. Only the first registered command 
 
 ### Basic Usage
 
-{% hint style="warning" %}
+{% hint style="info" %}
 The first parameter is optional. If the parameter is not provided, the method name will be used as command name.
 {% endhint %}
 
