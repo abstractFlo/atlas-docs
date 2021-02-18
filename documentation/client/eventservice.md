@@ -117,5 +117,60 @@ export class MyComponent {
 }
 ```
 {% endtab %}
+
+{% tab title="onGui" %}
+```typescript
+export class MyComponent {
+
+    constructor(
+        private readonly eventService: EventService
+    ) {
+        this.eventService.onGui('event', (...args: any[]) => {
+            // Do you stuff
+        })
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### Net to know
+
+We provide some other methods for **offServer** and **off** Eventlistener.
+
+{% tabs %}
+{% tab title="offServer" %}
+```typescript
+// Keep in mind, offServer need the same function context as onServer to remove
+// the eventListener
+export class MyComponent {
+
+    constructor(
+        private readonly eventService: EventService
+    ) {
+        this.eventService.offServer('event', (...args: any[]) => {
+            // Do you stuff
+        })
+    }
+}
+```
+{% endtab %}
+
+{% tab title="off" %}
+```typescript
+// Keep in mind, offServer need the same function context as on to remove
+// the eventListener
+export class MyComponent {
+
+    constructor(
+        private readonly eventService: EventService
+    ) {
+        this.eventService.off('event', (...args: any[]) => {
+            // Do you stuff
+        })
+    }
+}
+```
+{% endtab %}
 {% endtabs %}
 
