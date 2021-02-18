@@ -6,7 +6,7 @@ description: Learn more about Encryption
 
 ## Introduction
 
-We have an simple encryption service powered by [sjcl](http://bitwiseshiftleft.github.io/sjcl/). We using it for creating secure tokens for out discord auth module. But if you want, you can use it too. We only implement encryption, **no decryption**.
+We have a simple encryption service powered by [sjcl](http://bitwiseshiftleft.github.io/sjcl/). We're using it to create secure tokens for the Discord auth module. If you want, you can use it too. We only implement encryption **no decryption**.
 
 ## Base Usage
 

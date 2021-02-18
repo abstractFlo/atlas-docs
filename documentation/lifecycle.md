@@ -6,18 +6,18 @@ description: Learn more about the Lifecycle
 
 ## Introduction
 
-There a many scenarios, where you want to wait for a method to be completed before starting another. That's why we create a custom lifecycle system for booting up the framework. In simple words, the lifecycle is a kind of a queue, where each decorator run after each other in a particular order.
+There are many scenarios, where you want to wait for the method to be completed before starting another one. That's why we create a custom lifecycle system for booting up the framework. In simple words, the lifecycle is kind of a queue, where each decorator runs after each other in a particular order.
 
 {% hint style="warning" %}
-This lifecycle does not affected the alt:V lifecycle. They only help you perform different task on different steps.
+This lifecycle does not affect the alt:V lifecycle. They only help you perform a different task on different steps.
 {% endhint %}
 
 ## Loader
 
-We have create a Loaderservice to fit our needs for the lifecycle we want. Using the loader is recommended and the setup is fairly easy. The only thing to do is, bootstrap your entry module and the loader starts the magic.
+We've created a Loaderservice to fit our needs for the lifecycle we want. Using the loader is recommended, and the setup is fairly easy. The only thing to do is, bootstrap your entry module, and the loader starts the magic.
 
 {% hint style="info" %}
-This is available on server and client side
+This is available on the server and client side
 {% endhint %}
 
 {% tabs %}
@@ -40,8 +40,8 @@ const loader = container.resolve(LoaderService);
 loader
     .bootstrap(ClientModule)
     .afterComplete(() => {
-        // This method is called, if the lifecycle finished
-        // You can send event to server to inform the player is ready
+        // This method is called, if the lifecycle is finished
+        // You can send an event to server to inform the player is ready
         // Example:
         UtilsService.log('~lg~Booting complete => ~w~Happy Playing');
         const eventService = container.resolve(EventService);
@@ -52,7 +52,7 @@ loader
 {% endtabs %}
 
 {% hint style="success" %}
-You don't need to load up other modules as well. Keep in mind, the available decorators do this for you.
+You don't need to load up other modules. Keep in mind, the available decorators do this for you.
 {% endhint %}
 
 ## Available Decorators
@@ -138,7 +138,6 @@ class YourModule {
 ```
 
 {% hint style="info" %}
-You can push as many as you want on each queue step. You only keep in mind, that any step would be call if the before step is finished and in this order:  
-**@Before** -&gt; **@After** -&gt; **@AfterBootstrap**
+You can push as much as you want on each queue step. You should only keep in mind, that any step would be call if the before step is finished and in this order: `Sentence doesn't make sense` **@Before** -&gt; **@After** -&gt; **@AfterBootstrap**
 {% endhint %}
 

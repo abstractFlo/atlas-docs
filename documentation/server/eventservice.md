@@ -6,15 +6,15 @@ description: Learn more about the Eventservice
 
 ## Introduction
 
-Send events is a key feature for each gamemode. This service will help you archive this goal.
+Sending events is a key feature for each gamemode. This service will help you archive this goal.
 
 {% hint style="info" %}
-Keep in mind, our eventservice is a wrapper arround the alt:V Eventsystem. If you want, you can use the way alt:V provide with **alt.emit**, **alt.emitClient** and so on. But in a clean code scenario, it would be better to use the eventService to keep your code clean an structured.
+Keep in mind, our event service is a wrapper around the alt:V event system. If you want, you can use it the way alt:V provides it with **alt.emit**, **alt.emitClient** and so on. In a clean code scenario, it would be better to use the eventService to keep your code clean and structured.
 {% endhint %}
 
 ## Base Usage
 
-We use the same methods signature as alt:V. If you are already familiar with it, then it is very easy for you to use this service.
+We use the same method signature as alt:V. If you are already familiar with it, then it will be very easy for you to use this service.
 
 {% tabs %}
 {% tab title="emit" %}
@@ -60,10 +60,10 @@ export class MyComponent {
 
 ## Special Usage
 
-In our own gamemode, we need from time to time this feature, to send data directly to player gui without the anoying part for create double code on clientside to only send data to gui. This method will help you to solve this problem.
+In our own gamemode we need the following feature to send data directly to the player's GUI without the annoying part of creating redundant code on clientside to pass data to GUI. This method will help you to solve this problem.
 
 {% hint style="info" %}
-Internal we use the client as a bridge. There is no magic, only a event that retrieve the data and send it to the gui.
+Internally, we use the client as a bridge. There is no magic, only an event that retrieves the data and send it to the GUI itself.
 {% endhint %}
 
 {% tabs %}
@@ -93,7 +93,7 @@ export class MyComponent {
 
 ## Side Notes
 
-The eventservice has also methods for retrieve events. But if you using the decorators, there is no need to use this. But for the sake of completeness.
+The event service also has methods for retrieving events. If you're using the decorators, there is no need to use them. For the sake of completeness, they're included.
 
 {% tabs %}
 {% tab title="on" %}

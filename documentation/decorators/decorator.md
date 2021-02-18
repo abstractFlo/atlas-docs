@@ -7,8 +7,8 @@ description: Learn more about the available Server Decorators
 ## Basic Event Decorator
 
 {% hint style="info" %}
-Every basic event decorator can have an parameter for the eventname to be listen  
-If not provided, the name from decorated method would be use as eventname.
+Every basic event decorator can have a parameter for the eventname to be listen  
+If the parameter is not provided, the name of the decorated method will be used as the eventname.
 {% endhint %}
 
 {% tabs %}

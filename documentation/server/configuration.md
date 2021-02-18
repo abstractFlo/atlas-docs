@@ -6,15 +6,15 @@ description: Learn more about Configuration
 
 ## Introduction
 
-We create a very small and simple to use configuration service. This service would be used inside the framework, but if you want, you can use it too.
+We created a very small and simple to use configuration service. This service is used inside the framework. If you want, you can use it too.
 
 {% hint style="info" %}
-We are not do any fancy magic stuff here. Thanks goes [`Lodash`](https://lodash.com/)
+We are not doing any fancy magic stuff here. Thanks go to [`Lodash`](https://lodash.com/)
 {% endhint %}
 
 ## Base Configuration
 
-The base configuration is our minimal setup for running all the framework stuff. Keep in mind, if you not using like discord, don't remove the params. They not used but to prevent compile errors on your side, it would be better to let them stay.
+The base configuration is our minimal setup to run all the framework stuff. Keep in mind, if you're not using Discord, don't remove the params. They will not be used but to prevent compile errors on your side. It is better to keep them.
 
 ```javascript
 {
@@ -44,10 +44,10 @@ The base configuration is our minimal setup for running all the framework stuff.
 
 ## Get Config Parameter
 
-Getting a parameter from the config file is fearly simple. Use the power of Dependency Injection and you are ready to go.
+Getting a parameter from the config file is quite simple. Use the power of Dependency Injection, and you're ready to go.
 
 {% hint style="warning" %}
-Nested elements would be get by separate the child with an dot
+You can get nested elements by separate the child with a dot `Incorrect Sentence`
 {% endhint %}
 
 ```javascript
@@ -66,7 +66,7 @@ export class MyComponent {
 }
 ```
 
-You can retrieve a config value with all nested elements if you want
+You can retrieve a config value with all nested elements if you require it
 
 ```javascript
 export class MyComponent {
@@ -84,7 +84,7 @@ export class MyComponent {
 }
 ```
 
-In some case, you want to get a default value, if your needed param is empty or does not exists
+In some cases, you want to get the default value. For example, your required param is empty or does not exist.
 
 ```javascript
 export class MyComponent {
@@ -104,9 +104,7 @@ export class MyComponent {
 
 ## Set Config Parameter
 
-It is possible, to create your own parameters or complete objects if you want. To prevent the needed base configuration for not beeing overrided, your custom configuration lives in his own scope. But no worry, they merged if you want to retrieve an value from the configservice.
-
-```javascript
+It is possible, to create your own parameters or complete objects if you want. To prevent overriding the required base configuration, your custom configuration is stored inside its own scope. They are automatically merged, if you want to get a value from the config service.```javascript
 export class MyComponent {
 
     // Load with dependency injection
@@ -123,6 +121,6 @@ export class MyComponent {
 ```
 
 {% hint style="info" %}
-Keep in mind, nesting works also too. You can nest your params as deep as you want, the ConfigService is handle all for you.
+Keep in mind, nesting works too. You can nest your params as deep as you want, the ConfigService will handle it all for you.
 {% endhint %}
 
