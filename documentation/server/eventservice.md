@@ -157,3 +157,43 @@ export class MyComponent {
 {% endtab %}
 {% endtabs %}
 
+### Net to know
+
+We provide some other methods for **offServer** and **off** Eventlistener.
+
+{% tabs %}
+{% tab title="offClient" %}
+```typescript
+// Keep in mind, offServer need the same function context as onClient to remove
+// the eventListener
+export class MyComponent {
+
+    constructor(
+        private readonly eventService: EventService
+    ) {
+        this.eventService.offClient('event', (...args: any[]) => {
+            // Do you stuff
+        })
+    }
+}
+```
+{% endtab %}
+
+{% tab title="off" %}
+```typescript
+// Keep in mind, offServer need the same function context as on to remove
+// the eventListener
+export class MyComponent {
+
+    constructor(
+        private readonly eventService: EventService
+    ) {
+        this.eventService.off('event', (...args: any[]) => {
+            // Do you stuff
+        })
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
