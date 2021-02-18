@@ -104,21 +104,24 @@ export class MyComponent {
 
 ## Set Config Parameter
 
-It is possible, to create your own parameters or complete objects if you want. To prevent overriding the required base configuration, your custom configuration is stored inside its own scope. They are automatically merged, if you want to get a value from the config service.```javascript
-export class MyComponent {
+It is possible, to create your own parameters or complete objects if you want. To prevent overriding the required base configuration, your custom configuration is stored inside its own scope. They are automatically merged, if you want to get a value from the config service.\`\`\`javascript export class MyComponent {
 
-    // Load with dependency injection
-    constructor(
-        private readonly configService: ConfigService
-    ) {}
+```text
+// Load with dependency injection
+constructor(
+    private readonly configService: ConfigService
+) {}
 
-    // Work with the resolved class
-    public yourMethod(): void {
-        this.configservice.set('hello', 'world');
-        // now you have create an config key 'hello' with the value 'world'
-    }
+// Work with the resolved class
+public yourMethod(): void {
+    this.configservice.set('hello', 'world');
+    // now you have create an config key 'hello' with the value 'world'
 }
 ```
+
+}
+
+\`\`\`
 
 {% hint style="info" %}
 Keep in mind, nesting works too. You can nest your params as deep as you want, the ConfigService will handle it all for you.

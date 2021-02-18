@@ -42,12 +42,11 @@ That's all for the setup. The framework does the rest for you.
 
 ## Example Usage
 
-This example is not a real world example. It will only show you the usage with the decorator and the interaction with the bot.
+This example is not a real world example. It will only show you the usage with the decorator and the interaction with the bot. To keep it simple as possible, there is a decorator for you to interact with the discord bot events.
+
+Any available bot event from [discord.js](https://discordjs.guide/) are also useable with the decorator. The event params will be moved to the method.
 
 {% hint style="warning" %}
-To keep it simple as possible, there is a decorator for you to interact with the discord bot events.  
-Any available bot event from [discord.js](https://discord.js.org/#/) are also useable with the decorator. The event params will be moved to the method.
-
 Keep in mind, the decorator is only available server side
 {% endhint %}
 
