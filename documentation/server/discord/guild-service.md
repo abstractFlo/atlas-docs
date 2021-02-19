@@ -9,7 +9,7 @@ description: Learn more about the guild service
 If you want to interact with your Discord Bot, it is important to retrieve your server from the guild cache. You also need to fetch the guild by your server id. This can be annoying if you do this over and over again. That's why we created the guild service for you. Currently, there's only one feature inside the service that grabs your guild. The service will be extended by more features and ideas in the future.
 
 {% hint style="warning" %}
-Wishes and ideas can be posted inside \#ideas-features channel in our Discord
+Wishes and ideas can be posted inside [\#ideas-and-features](https://discord.gg/xNFaVN4asB) channel in our Discord
 {% endhint %}
 
 ## Basic Usage

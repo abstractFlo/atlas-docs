@@ -1,7 +1,10 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Installation](installation.md)
+* [Installation](installation/README.md)
+  * [Docker Template](installation/docker-template.md)
+  * [Vanilla Template](installation/vanilla-template.md)
+  * [Integrate in your own Stack](installation/integrate-in-your-own-stack.md)
 * [FAQ](faq.md)
 
 ## Documentation
@@ -35,6 +38,12 @@
   * [Base Pool](documentation/shared/pools.md)
   * [LoggerService](documentation/shared/loggerservice.md)
   * [UtilsService](documentation/shared/utilsservice.md)
+
+## Recepies
+
+## Snippets
+
+## Scripts
 
 ## External Links
 
