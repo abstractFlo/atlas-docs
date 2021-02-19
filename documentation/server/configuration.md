@@ -108,7 +108,7 @@ export class MyComponent {
 
 ## Set Config Parameter
 
-It is possible, to create your own parameters or complete objects if you want. To prevent overriding the required base configuration, your custom configuration is stored inside its own scope. They are automatically merged, if you want to get a value from the config service.
+It is possible to create your own parameters or complete objects if you want. To prevent overriding the required base configuration, your custom configuration is stored inside its own scope. They are automatically merged, if you want to get a value from the config service.
 
 ```typescript
 export class MyComponent {

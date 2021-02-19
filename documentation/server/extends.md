@@ -6,17 +6,17 @@ description: 'Learn more about our custom alt:V Internal Extends'
 
 ## Introduction
 
-We have create some extends for alt:V Internals. This will help you do some basic stuff without the boilerplate. Extends means that we create new methods and properties on Internal alt:V Classes
+We created some extends for alt:V Internals. This will help you to do some basic stuff without the boilerplate. Extending means that we create new methods and properties on internal alt:V classes
 
 {% hint style="success" %}
-Extending classes in TypeScript, is done by override the prototype for a class like **Player** or **Vehicle**.
+Extending classes in TypeScript is done by overriding the prototype of a class like **Player** or **Vehicle**.
 {% endhint %}
 
 ## Our Extends
 
 ### alt.Player
 
-We have create 2 methods thats available on each Player Instance.
+We created 2 methods that are available on each Player Instance.
 
 {% tabs %}
 {% tab title="emit" %}
@@ -40,7 +40,7 @@ player.emitGui('yourEventName', 'arg1', 'arg2','arg3')
 
 ### alt.Colshape
 
-The Colshape has a new property for add a name to it.
+The colshape has a new property to attach a name to it.
 
 {% tabs %}
 {% tab title="name" %}

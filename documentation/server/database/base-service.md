@@ -6,11 +6,11 @@ description: Learn more about the BaseService
 
 ## Introduction
 
-To keep it simple as possible for you to work with database entities, we created a BaseService with all the basic interaction stuff.
+To keep it simple as possible for you to work with database entities, we created a BaseService with all the basic interaction methods.
 
 ## Included Features
 
-Following features included inside the BaseService.
+Following features are included inside the BaseService.
 
 ### Methods
 
@@ -30,7 +30,7 @@ Following features included inside the BaseService.
 
 ## Usage
 
-The usage is simple. Only extend the BaseService in your own service and setup the constructor and generic type.
+The usage is simple. Only extend the BaseService in your own service and set up the constructor and generic type.
 
 {% tabs %}
 {% tab title="your.service.ts" %}

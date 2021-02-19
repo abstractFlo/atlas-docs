@@ -6,11 +6,11 @@ description: Learn more about the shipped Constants
 
 ## Introduction
 
-Our Framework has some predefined constants they must be used if you want to use some internal services.
+Our framework has some predefined constants. They have to be used if you want to use some internal services.
 
 ## Available Constants
 
-This constants used to define our services and events for outside use. To prevent some upgrade errors, please use the constants instead of the name
+These constants are used to define our services and events for external usage. Please make sure that you use the constants instead of their values. Using the constants will prevent issues when you update the framework in the future.
 
 ```typescript
 export const FrameworkEvent = {

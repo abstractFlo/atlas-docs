@@ -6,8 +6,8 @@ description: Learn more about Logger Service
 
 ## Introduction
 
-The LoggerService is a wrapper around the alt:V log features. It's created to fit the Object Oriented needs.  
-We have improve some parts for logging to help you out.
+The LoggerService is a wrapper around the alt:V log feature. It's created to fit the object-oriented requirements.  
+We had to improve some parts for logging to help you out.
 
 {% hint style="success" %}
 LoggerService is available on both sides
@@ -15,11 +15,11 @@ LoggerService is available on both sides
 
 ### Available Methods
 
-This section describe the available methods that you can use.
+This section describes the available methods that you can use.
 
 #### info\(...messages: any\[\]\)
 
-Simple log one or messages
+This logs the message 'Your message' as a default log
 
 ```typescript
 @singleton()
@@ -37,7 +37,7 @@ export class YourClass {
 
 #### warning\(...messages: any\[\]\)
 
-Simple log one or messages as warning
+This logs the message 'Your message' as a warning
 
 ```typescript
 @singleton()
@@ -55,7 +55,7 @@ export class YourClass {
 
 #### error\(...messages: any\[\]\)
 
-Simple log one or messages as error
+This logs the message 'Your message' as an error
 
 ```typescript
 @singleton()
@@ -73,7 +73,7 @@ export class YourClass {
 
 #### starting\(message: string\)
 
-Simple log a message formated as starting
+This logs a message formatted as starting
 
 ```typescript
 @singleton()
@@ -93,7 +93,7 @@ export class YourClass {
 
 #### started\(message: string\)
 
-Simple log a message formated as started
+This logs a message formatted as started
 
 ```typescript
 @singleton()

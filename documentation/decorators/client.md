@@ -94,7 +94,7 @@ public doSomething(): void {
 
 ## GameEntity Decorators
 
-If you want to interact with GameEntity creation and destroying, it can be really frustrating.  
+Interacting with the game entity events like \(**gameEntityCreate** and **gameEntityDestroy**\) can be really annoying.  
 The framework helps you a lot with this. Don't worry, only one event listener will be created for these decorators.  
 You can use as many as you want without performance issues.
 
@@ -179,6 +179,6 @@ public doSomethingSpecial(entity: Player, newValue: any, oldValue: any): void {
 {% endtabs %}
 
 {% hint style="success" %}
-If you use the second parameter as your key, please notice that this key won't be present inside the method parameter map anymore.
+If you use the second parameter as your key, please notice that this key won't be able to use inside the method parameter map anymore.
 {% endhint %}
 

@@ -6,17 +6,17 @@ description: Learn more about the integration in your own Stack
 
 ## Introduction
 
-If you have create your own setup and you want to integrated the Framework inside, it is possible by installing the npm packages.
+If you create your own setup and you want to integrate the framework inside, it is possible by installing the npm packages.
 
 ```text
 npm install -D @abstractFlo/client @abstractFlo/server @abstractFlo/shared
 ```
 
 {% hint style="danger" %}
-You must be setup the bundler for yourself. We can not give any kind of support for your own stack.
+You have to set up the bundler for yourself. We can not give any kind of support for your own stack.
 {% endhint %}
 
-After this step, you must create bootstrap files they loaded before your first gamemode related script resolved.
+After this step, you need to create some bootstrap files. They are loaded before your first gamemode related script gets resolved.
 
 {% tabs %}
 {% tab title="Bootstrap Clientside" %}
@@ -145,6 +145,6 @@ process.on('uncaughtException', (err) => {
 {% endtabs %}
 
 {% hint style="success" %}
-Now you able to start using the Framework. Have fun with it ❤ 
+Now you are able to start using the Framework. Have fun with it ❤ 
 {% endhint %}
 
