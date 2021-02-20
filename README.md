@@ -29,7 +29,7 @@ Our goal is to provide you with a simple system that is easy to understand and i
 * Intuitive helper methods to maintain the performance of your gamemode
   * Sophisticated [Decorators](basic-knowledge/decorators/)
   * [Helpful Service classes](shared/utilsservice.md)
-* [DatabaseService](server/database/) for easy use
+* [DatabaseService](server/database.md) for easy use
 * Discord
   * [OAuth Server Integration](server/discord/authentication.md)
   * [Bot Integration](server/discord/bot.md)
