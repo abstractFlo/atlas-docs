@@ -6,8 +6,7 @@ description: Learn more about Logger Service
 
 ## Introduction
 
-The LoggerService is a wrapper around the alt:V log feature. It's created to fit the object-oriented requirements.  
-We had to improve some parts for logging to help you out.
+The LoggerService is a wrapper around the alt:V log feature. It's created to fit the object-oriented requirements. We had to improve some parts for logging to help you out.
 
 {% hint style="success" %}
 LoggerService is available on both sides

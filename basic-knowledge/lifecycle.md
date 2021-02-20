@@ -57,7 +57,7 @@ You don't need to load up other modules. Keep in mind, the available decorators 
 
 ## Available Decorators
 
-The done callback has a duration within **5000ms**. If your task not over in this time, the console would show you some informations about.
+The done callback has a duration within **5000ms**. If your task not over in this time, the console would show you some information about.
 
 {% hint style="warning" %}
 You can increase this time, by adding as argument to decorator

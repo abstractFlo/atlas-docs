@@ -18,8 +18,7 @@
 ## Server
 
 * [Configuration](server/configuration.md)
-* [Database](server/database/README.md)
-  * [Base Service](server/database/base-service.md)
+* [Database](server/database.md)
 * [Event Service](server/eventservice.md)
 * [Discord](server/discord/README.md)
   * [Authentication](server/discord/authentication.md)
@@ -30,7 +29,6 @@
 
 ## Client
 
-* [Decorator](client/decorator.md)
 * [Event Service](client/eventservice.md)
 * [Webview Service](client/webview.md)
 * [Extends](client/extended-entities.md)
@@ -49,4 +47,10 @@
 * [Project Atlas Discord](https://discord.gg/DcpsfkVkfb)
 * [Atlas Docker Template](https://github.com/abstractFlo/atlas-starter-docker)
 * [Svelte CEF Template](https://github.com/abstractFlo/altv-svelte-tailwind-typescript)
+
+## Recipes
+
+## Snippets
+
+## Scripts
 

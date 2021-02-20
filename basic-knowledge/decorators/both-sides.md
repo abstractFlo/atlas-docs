@@ -93,7 +93,7 @@ public createVehicle(name: string): void {
     const player: Player = alt.Player.local;
     const pos = new alt.Vector3({...player.pos}).add(2,2,0);
     const rot = new alt.Vector3({...player.rot}).toDegrees();
-    const vehicleHash= alt.hash('name');
+    const vehicleHash= alt.hash(name);
 
     const vehicle = new alt.Vehicle(
         vehicleHash, 

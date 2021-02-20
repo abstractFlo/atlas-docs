@@ -59,7 +59,7 @@ public youAwesomMethod(player: Player): void {
 Working with key events can be very confusing. The following decorators might help you while you can focus on the funny part.
 
 {% hint style="info" %}
-Key Event Decorators has one parameter, number or first char from the name of the key
+Key Event Decorators has one parameter that is the number or first char from the name of the key
 {% endhint %}
 
 {% tabs %}
