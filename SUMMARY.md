@@ -39,12 +39,6 @@
   * [LoggerService](documentation/shared/loggerservice.md)
   * [UtilsService](documentation/shared/utilsservice.md)
 
-## Recepies
-
-## Snippets
-
-## Scripts
-
 ## External Links
 
 * [alt:V Official](https://altv.mp)

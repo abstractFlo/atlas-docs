@@ -5,8 +5,8 @@ description: Learn more about the Utils Service
 # UtilsService
 
 ## Introduction
-Sometimes you always need the same implementation of a method in different scenarios.
-For instance, you want to build classes and use them on client and server side.
+
+Sometimes you always need the same implementation of a method in different scenarios. For instance, you want to build classes and use them on client and server side.
 
 There are a few helpers built in that should help you to keep your performance in check.
 
@@ -19,6 +19,7 @@ UtilsService can be used on both sides
 This section covers all available methods included in UtilsService
 
 #### setTimeout\(listener: CallableFunction, duration: number\)
+
 This method creates a simple timeout and automatically clears it once the timeout is finished.
 
 ```typescript
@@ -87,7 +88,7 @@ const nextTick = UtilsService.nextTick(() => {
 
 #### clearInterval\(interval: number\)
 
-This method clears an interval based on the intervalId returned by the setInterval method. 
+This method clears an interval based on the intervalId returned by the setInterval method.
 
 ```typescript
 // Create a interval which is processed every 1000ms
@@ -114,6 +115,7 @@ const timeout = UtilsService.setTimeout(() => {
 #### clearNextTick\(tick: number\)
 
 This method clears a nextTick based on the nextTickId
+
 ```typescript
 // Create a nextTick which is processed nextTick ;)
 const nextTick = UtilsService.nextTick(() => {
@@ -125,7 +127,7 @@ UtilsService.clearNextTick(nextTick)
 
 #### clearEveryTick\(tick: number\)
 
-This method clears a everyTick based on the id returned by the everyTick() method
+This method clears a everyTick based on the id returned by the everyTick\(\) method
 
 ```typescript
 // Create a everyTick which is processed everyTick ;)

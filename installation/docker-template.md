@@ -6,14 +6,14 @@ description: Learn more about using the Docker Template
 
 ## Introduction
 
-We don't teach you the installation about docker. Please read the Docker Docs specific for your environment. 
+We don't teach you the installation about docker. Please read the Docker Docs specific for your environment.
 
 ### Step 1
 
 Install the template with [degit](https://www.npmjs.com/package/degit). This tool helps you to clone the starter template
 
 ```bash
-npx degit abstractFlo/atlas-starter-docker gamemode
+npx degit abstractFlo/atlas-starter#docker gamemode
 ```
 
 ### Step 2
@@ -42,7 +42,6 @@ BUILD_DIR=/your/path/for/build/files
 DOCKER_PROJECT_PATH=/path/to/files/inside/docker
 # Define branch you want to develop release/rc/dev
 SERVER_BRANCH=release
-
 ```
 {% endtab %}
 
@@ -67,7 +66,6 @@ debug : true
 resources : [
     gamemode # setup the name of your resource
 ]
-
 ```
 {% endtab %}
 
@@ -99,7 +97,6 @@ resources : [
     "user_me_url": "https://discord.com/api/users/@me"
   }
 }
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -148,12 +145,12 @@ Congratulation, you have successfully set up your environment. Now it's time to 
 To help you understand how the whole system works, we will explain the structure and configuration options here. The template contains a good starting point to teach yourself.
 
 {% hint style="warning" %}
-There are two folders for your gamemode creation. 
+There are two folders for your gamemode creation.
 {% endhint %}
 
 ### **Resources**
 
-This folder will be bundled by Rollup to ES6 on Server/Client side. Inside the directory you can create folders as many as you want. 
+This folder will be bundled by Rollup to ES6 on Server/Client side. Inside the directory you can create folders as many as you want.
 
 #### package.json
 
@@ -165,10 +162,10 @@ You can create a package.json file inside your folder. This is only needed one t
 {
   # the name for your resource
   "name": "gamemode",
-  
+
   # set true, rollup will bundle it to BUILD_DIR with given name
   "isGameResource": true,
-  
+
   # If you get some errors while bundle up some CJS modules
   # you can define it as external and convertedModules
   # in most cases it would be done automatic
@@ -176,7 +173,7 @@ You can create a package.json file inside your folder. This is only needed one t
     "external": [],
     "convertedModules": []
   },
-  
+
   # If you get some errors while bundle up some CJS modules
   # you can define it as external and convertedModules
   # in most cases it would be done automatic
@@ -185,7 +182,6 @@ You can create a package.json file inside your folder. This is only needed one t
     "convertedModules": []
   }
 }
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -219,7 +215,7 @@ Keep in mind, if you set up a package.json, you need the assets folder as well t
 
 ### **Retail**
 
-This folder contains all your ready to use resources like maps, cars, weapons and so on. The build process will copy all this files inside your **BUILD\_DIR** and ****respects your created folder structure inside.  
+This folder contains all your ready to use resources like maps, cars, weapons and so on. The build process will copy all this files inside your **BUILD\_DIR** and _\*\*_respects your created folder structure inside.  
 You can prevent some resources for copying by adding an underscore prefix.
 
 ```bash

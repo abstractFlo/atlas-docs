@@ -27,7 +27,6 @@ export const FrameworkEvent = {
     SetRealTime: 'player:set:realtime'
   }
 }
-
 ```
 
 ### Example
@@ -49,6 +48,5 @@ export class YourComponent{
     // Do whatever you want
   }
 }
-
 ```
 

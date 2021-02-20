@@ -22,14 +22,14 @@ We created a method to simple route inside your SPA
 {% tab title="routeTo" %}
 ```typescript
 export class YourComponent {
-    
+
     /**
      * Get webviewService from DI-Container
      */
     constructor(
         private readonly webviewService: WebviewService
     ) {}
-    
+
     /**
      * Route to specific url inside your SPA
      */

@@ -43,15 +43,15 @@ export class YourService extends BaseService<YourEntity> {
     constructor() {
         super(YourEntity)
     }
-    
+
     // Now you can access all the base service features like
     // getAll(), findById(), ....
-    
+
     // You can add your own methods too
     public findByWhatEver(whatever: string): Promise<YourEntity> {
         return this.repo.find({whatevet});
     }
-    
+
 
 }
 ```

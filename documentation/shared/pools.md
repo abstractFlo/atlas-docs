@@ -6,7 +6,7 @@ description: Learn more about the BasePool
 
 ## Introduction
 
-Dealing with a huge amount of objects can be really harde. To make it easier for you, we create a Base Pool Class. The class provides the feature, that you can create a "Pool" for any kind of objects. Internaly we use a simple [ES6 Map](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Map).  The usage is really simple and if you only need the basic stuff, you only need a few lines of code to create your own pool.
+Dealing with a huge amount of objects can be really harde. To make it easier for you, we create a Base Pool Class. The class provides the feature, that you can create a "Pool" for any kind of objects. Internaly we use a simple [ES6 Map](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Map). The usage is really simple and if you only need the basic stuff, you only need a few lines of code to create your own pool.
 
 ### The BasePool Class
 
@@ -119,7 +119,6 @@ import { singleton } from 'tsyringe';
 
 @singleton()
 export class PlayerPool extends BasePool<Player, string> {}
-
 ```
 {% endtab %}
 
@@ -155,7 +154,6 @@ export class PlayerComponent {
     this.playerPool.remove(player.id);
   }
 }
-
 ```
 {% endtab %}
 {% endtabs %}

@@ -28,7 +28,7 @@ export class YourClass {
     constructor(
         private readonly loggerService: LoggerService
     ) {}
-    
+
     public yourMethod(): void {
         this.loggerService.info('Your message')
     }
@@ -46,7 +46,7 @@ export class YourClass {
     constructor(
         private readonly loggerService: LoggerService
     ) {}
-    
+
     public yourMethod(): void {
         this.loggerService.warning('Your message')
     }
@@ -64,7 +64,7 @@ export class YourClass {
     constructor(
         private readonly loggerService: LoggerService
     ) {}
-    
+
     public yourMethod(): void {
         this.loggerService.error('Your message')
     }
@@ -82,7 +82,7 @@ export class YourClass {
     constructor(
         private readonly loggerService: LoggerService
     ) {}
-    
+
     public yourMethod(): void {
         this.loggerService.starting('DatabaseService')
     }
@@ -102,7 +102,7 @@ export class YourClass {
     constructor(
         private readonly loggerService: LoggerService
     ) {}
-    
+
     public yourMethod(): void {
         this.loggerService.started('DatabaseService')
     }

@@ -47,11 +47,11 @@ import { On } from '@abstractFlo/shared';
 import { ExampleService } from './example.service';
 
 export class ExampleComponent {
-  
+
   constructor(
     private readonly exampleService: ExampleService
   ) {}
-  
+
   /**
    * Load entries sync
    */
@@ -65,9 +65,9 @@ export class ExampleComponent {
       .catch((err) => {
         // Do what ever you want if error
       })
-    
+
   }
-  
+
   /**
    * Load entries async
    */
@@ -75,7 +75,7 @@ export class ExampleComponent {
   public async loadAllAsync(): void {
     try {
       const yourEntities = await this.exampleService.loadAll();
-      
+
       // do whatever you want
     } catch(err) {
       // do whatever you want if error
@@ -83,7 +83,6 @@ export class ExampleComponent {
   }
 
 }
-
 ```
 {% endtab %}
 
@@ -113,9 +112,8 @@ export class ExampleService {
   public getAll(): Promise<YourEntity[]> {
     return this.repo.find();
   }
-  
-}
 
+}
 ```
 {% endtab %}
 {% endtabs %}

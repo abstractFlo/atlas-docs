@@ -23,7 +23,6 @@ import { setupWebviewRegistry } from '@abstractFlo/shared';
 
 // other stuff inside bootstrap.ts
 setupWebviewRegistry('http://your/path/to/your/webview', 'routeEventName');
-
 ```
 {% endtab %}
 
@@ -51,7 +50,6 @@ export class PlayerAuthComponent {
         .showCursor();
   }
 }
-
 ```
 {% endtab %}
 {% endtabs %}

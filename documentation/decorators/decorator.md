@@ -58,7 +58,6 @@ Only the first parameter is required to identify the triggered colShape. If you 
 {% tabs %}
 {% tab title="@EntityEnterColShape" %}
 ```typescript
-
 // Would be triggered if colshape is cylinder with name myColShape 
 // and the entity is a player
 @EntityEnterColShape(ColShapeType.Cylinder, 'myColShape', BaseObjectType.Player)
@@ -82,7 +81,6 @@ public testEnter3(colshape: Colshape, entity: Entity): void {
 
 {% tab title="@EntityLeaveColShape" %}
 ```typescript
-
 // Would be triggered if colshape is cylinder with name myColShape 
 // and the entity is a player
 @EntityLeaveColShape(ColShapeType.Cylinder, 'myColShape', BaseObjectType.Player)

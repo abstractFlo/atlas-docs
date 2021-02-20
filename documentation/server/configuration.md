@@ -116,7 +116,7 @@ export class MyComponent {
     constructor(
         private readonly configService: ConfigService
     ) {}
-    
+
     // Work with the resolved class
     public yourMethod(): void {
         this.configservice.set('hello', 'world');
