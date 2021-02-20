@@ -6,7 +6,7 @@ description: Learn more about the integration in your own Stack
 
 ## Introduction
 
-If you create your own setup and you want to integrate the framework inside, it is possible by installing the npm packages.
+If you create your own setup, and you want to integrate the framework inside, it is possible by installing the npm packages.
 
 ```text
 npm install -D @abstractFlo/client @abstractFlo/server @abstractFlo/shared
