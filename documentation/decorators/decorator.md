@@ -7,7 +7,7 @@ description: Learn more about the available Server Decorators
 ## Basic Event Decorator
 
 {% hint style="info" %}
-Every basic event decorator can have a parameter for the eventname to be listen  
+Every basic event decorator has an optional parameter for the eventname to be listened  
 If the parameter is not provided, the name of the decorated method will be used as the eventname.
 {% endhint %}
 
@@ -49,10 +49,10 @@ public youAwesomMethod(player: Player): void {
 
 ## Colshape Decorator
 
-If you want using colshapes in your gamemode, that can be frustrate you every time if you want to check which entity is in, if any entity enter or leave the colshape and many more usecases. That's why we create this decorators. Working with colshapes was never easier before.
+Dealing with colshapes can be really frustrating. For example, you want to use colshapes in your gamemode and check which entity is inside the colshape or what entity enters or leaves the colshape. That's why we create these decorators. Working with colshapes has never been easier.
 
 {% hint style="info" %}
-Only the first parameter is needed for identify the triggered colShape. If you would get more specific, you can set the name and the triggered entity type.
+Only the first parameter is required to identify the triggered colShape. If you want to be more specific, you can set the name, and the triggered entity type.
 {% endhint %}
 
 {% tabs %}

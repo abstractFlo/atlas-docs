@@ -6,7 +6,7 @@ description: Learn more about JSONEntityModel
 
 ## Introduction
 
-Actually, the JSON Entity Model is intended to simplify non-consistent API interfaces. It helps to convert values into the correct types and if necessary to send them away in a different format. In our case we use it simply out of habit. This is not necessary for everyone. But for the sake of completeness, here are the instructions for it.
+Actually, the JSON Entity Model is intended to simplify non-consistent API interfaces. It helps to convert values into the correct types and if necessary to send them away in a different format. In our case, we use it a bit different. This is not necessary for everyone but for the sake of completeness, here are the instructions for it.
 
 ## Callback and @Cast config definitions
 

@@ -5,9 +5,10 @@ description: Learn more about the Utils Service
 # UtilsService
 
 ## Introduction
+Sometimes you always need the same implementation of a method in different scenarios.
+For instance, you want to build classes and use them on client and server side.
 
-It can happen that you always need the same implementation of a method in different scenarios. This can be for example if you want to build classes that you want to use on client and server side.  
-There are a few helpers built in to help you keep your performance in check.
+There are a few helpers built in that should help you to keep your performance in check.
 
 {% hint style="success" %}
 UtilsService can be used on both sides
@@ -15,11 +16,10 @@ UtilsService can be used on both sides
 
 ## Available Methods
 
-This sections covered all available methods included in UtilsService
+This section covers all available methods included in UtilsService
 
 #### setTimeout\(listener: CallableFunction, duration: number\)
-
-Create a simple timeout. This method clear the timeout after finished.
+This method creates a simple timeout and automatically clears it once the timeout is finished.
 
 ```typescript
 // Create a timeout which is processed after 1000ms
@@ -30,7 +30,7 @@ const timeout = UtilsService.setTimeout(() => {
 
 #### setInterval\(listener: CallableFunction, milliseconds: number\)
 
-Create a simple interval.
+This method creates a simple interval.
 
 {% hint style="danger" %}
 Please do not forget to [clear](utilsservice.md#clearinterval-interval-number) the interval if you do not need it anymore
@@ -45,7 +45,7 @@ const interval = UtilsService.setInterval(() => {
 
 #### everyTick\(listener: CallableFunction\)
 
-Create a simple everyTick.
+This method creates a simple everyTick.
 
 {% hint style="danger" %}
 Please do not forget to [clear](utilsservice.md#cleareverytick-tick-number) the everyTick if you do not need it anymore
@@ -60,7 +60,7 @@ const everyTick = UtilsService.everyTick(() => {
 
 #### autoClearInterval\(listener: CallableFunction, milliseconds: number, intervalDuration: number\)
 
-Create interval they is autocleared after defined duration.
+This method creates an interval that will automatically be cleared after the defined duration.
 
 ```typescript
 // Create a autoClearInterval which is processed every 1000ms 
@@ -72,7 +72,7 @@ UtilsService.autoClearInterval(() => {
 
 #### nextTick\(listener: CallableFunction\)
 
-Create a simple nextTick.
+This method creates a simple nextTick.
 
 {% hint style="danger" %}
 Please do not forget to [clear](utilsservice.md#clearnexttick-tick-number) the nextTick if you do not need it anymore
@@ -87,7 +87,7 @@ const nextTick = UtilsService.nextTick(() => {
 
 #### clearInterval\(interval: number\)
 
-Clear given interval number
+This method clears an interval based on the intervalId returned by the setInterval method. 
 
 ```typescript
 // Create a interval which is processed every 1000ms
@@ -101,11 +101,11 @@ UtilsService.clearInterval(interval)
 
 #### clearTimeout\(timeout: number\)
 
-Clear given timeout number
+This method clears a timeout based on the timeoutId.
 
 ```typescript
 // Create a timeout which is processed after 1000ms
-const timeout = UtilsService.setInterval(() => {
+const timeout = UtilsService.setTimeout(() => {
     // Clear the timeout
     UtilsService.clearTimeout(timeout)
 }, 1000)
@@ -113,8 +113,7 @@ const timeout = UtilsService.setInterval(() => {
 
 #### clearNextTick\(tick: number\)
 
-Clear given nextTick number
-
+This method clears a nextTick based on the nextTickId
 ```typescript
 // Create a nextTick which is processed nextTick ;)
 const nextTick = UtilsService.nextTick(() => {
@@ -126,7 +125,7 @@ UtilsService.clearNextTick(nextTick)
 
 #### clearEveryTick\(tick: number\)
 
-Clear given everyTick number
+This method clears a everyTick based on the id returned by the everyTick() method
 
 ```typescript
 // Create a everyTick which is processed everyTick ;)
@@ -139,7 +138,7 @@ UtilsService.clearEveryTick(everyTick)
 
 #### log\(...messages: any\[\]\)
 
-Log one ore more message to console
+This method logs a message
 
 ```typescript
 UtilsService.log('your message')
@@ -147,7 +146,7 @@ UtilsService.log('your message')
 
 #### logWarning\(...messages: any\[\]\)
 
-Log one ore more message to console as warning
+This method logs a message as a warning
 
 ```typescript
 UtilsService.logWarning('your message')
@@ -155,7 +154,7 @@ UtilsService.logWarning('your message')
 
 #### logError\(...messages: any\[\]\)
 
-Log one ore more message to console as error
+This method logs a message as an error
 
 ```typescript
 UtilsService.logError('your message')
@@ -163,7 +162,7 @@ UtilsService.logError('your message')
 
 #### logLoaded\(...messages: any\[\]\)
 
-Log one ore more message to console formated as loaded
+This method logs a message formatted as loaded
 
 ```typescript
 UtilsService.logLoaded('your message')
@@ -172,7 +171,7 @@ UtilsService.logLoaded('your message')
 
 #### logUnloaded\(...messages: any\[\]\)
 
-Log one ore more message to console formated as unloaded
+This method logs a message formatted as unloaded
 
 ```typescript
 UtilsService.logUnloaded('your message')
@@ -182,12 +181,12 @@ UtilsService.logUnloaded('your message')
 ### Event Helpers
 
 {% hint style="danger" %}
-All event methods are only called in his specific context - Client/Server. They can't communitcate with the other side.
+All event methods are only called in its specific context - Client/Server. They can't communicate with the other side.
 {% endhint %}
 
 #### eventOn\(eventName: string, listener: \(...args: any\[\]\) =&gt; void\)
 
-Listen for event
+Listen for an event
 
 ```typescript
 UtilsService.eventOn('eventName', (...args: any []) =>  {
@@ -197,7 +196,7 @@ UtilsService.eventOn('eventName', (...args: any []) =>  {
 
 #### eventOnce\(eventName: string, listener: \(...args: any\[\]\) =&gt; void\)
 
-Listen for event once time
+Listen for an event once
 
 ```typescript
 UtilsService.eventOnce('eventName', (...args: any []) =>  {
@@ -207,10 +206,10 @@ UtilsService.eventOnce('eventName', (...args: any []) =>  {
 
 #### eventOff\(eventName: string, listener: \(...args: any\[\]\) =&gt; void\)
 
-Remove listener for event
+Removes the listener of an event
 
 {% hint style="info" %}
-Keep in mind the listener must be the same context as the [on](utilsservice.md#eventon-eventname-string-listener-args-any-greater-than-void) listener
+Keep in mind that the listener has to be in the same context as the [on](utilsservice.md#eventon-eventname-string-listener-args-any-greater-than-void) listener
 {% endhint %}
 
 ```typescript
@@ -221,7 +220,7 @@ UtilsService.eventOff('eventName', (...args: any []) =>  {
 
 #### eventEmit\(eventName: string, ...args: any\[\]\)
 
-Emit event
+Emits an event
 
 ```typescript
 UtilsService.eventEmit('eventName', 'arg1', 'arg2')

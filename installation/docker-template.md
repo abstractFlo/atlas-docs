@@ -10,7 +10,7 @@ We don't teach you the installation about docker. Please read the Docker Docs sp
 
 ### Step 1
 
-Install the template with [degit](https://www.npmjs.com/package/degit). This tool helps you out clone the starting template
+Install the template with [degit](https://www.npmjs.com/package/degit). This tool helps you to clone the starter template
 
 ```bash
 npx degit abstractFlo/atlas-starter-docker gamemode
@@ -27,7 +27,7 @@ npm install
 
 ### Step 3
 
-Setup needed environemt variables
+Set up the required environment variables
 
 {% tabs %}
 {% tab title=".env" %}
@@ -106,7 +106,7 @@ resources : [
 
 ### Step 4
 
-Start the watcher and boot up docker. Keep in mind that your Terminals must be point to the root directory.
+Start the watcher and boot up docker. Keep in mind that your terminals need to point to the root directory.
 
 {% tabs %}
 {% tab title="Terminal 1" %}
@@ -136,16 +136,16 @@ docker exec -it altv bash
 {% endtabs %}
 
 {% hint style="warning" %}
-There is no need to stop the docker process everytime. You can stop the server inside the container and restart at any time you make changes in your script.
+There is no need to stop the docker process everytime. You can stop the server inside the container and restart it at any time you make changes in your script.
 {% endhint %}
 
 {% hint style="success" %}
-Congratulation, you has successfully setup your environment. Not it's time to create your awesome gamemode.
+Congratulation, you have successfully set up your environment. Now it's time to create your awesome gamemode.
 {% endhint %}
 
 ## Explain Folder Structure
 
-To help you understand how the whole system works, we will explain the structure and configuration options here. The Template contains a good starting point to teach yourself.
+To help you understand how the whole system works, we will explain the structure and configuration options here. The template contains a good starting point to teach yourself.
 
 {% hint style="warning" %}
 There are two folders for your gamemode creation. 
@@ -153,11 +153,11 @@ There are two folders for your gamemode creation.
 
 ### **Resources**
 
-This folder would be bundled by Rollup to ES6 on Server/Client side. Inside you can create folders as many as you want. 
+This folder will be bundled by Rollup to ES6 on Server/Client side. Inside the directory you can create folders as many as you want. 
 
 #### package.json
 
-You can create a package.json file inside your folder. This is only needed one time to tell rollup which folder is a resource and which one not.
+You can create a package.json file inside your folder. This is only needed one time to tell rollup which folder is a resource and which not.
 
 {% tabs %}
 {% tab title="resources/gamemode/package.json" %}
@@ -190,7 +190,7 @@ You can create a package.json file inside your folder. This is only needed one t
 {% endtab %}
 {% endtabs %}
 
-Your done, in most cases there is no need to create multiple gamemode resources. You can create multiple folders inside resources and use them as shared scripts. You can import the scripts at any place inside the resource folder.
+You're done! In most cases there is no need to create multiple gamemode resources. You can create multiple folders inside resources and use them as shared scripts. You can import the scripts at any place inside the resource folder.
 
 ```bash
 - resources
@@ -214,13 +214,13 @@ Your done, in most cases there is no need to create multiple gamemode resources.
 ```
 
 {% hint style="warning" %}
-Keep in mind, if you setup a package.json, you need the assets folder as well to setup the resource.cfg
+Keep in mind, if you set up a package.json, you need the assets folder as well to set up the resource.cfg
 {% endhint %}
 
 ### **Retail**
 
-This folder contains all your ready to use resources like maps, cars, weapons and so on. The build process would copy all this files inside your **BUILD\_DIR** and ****respects your created folder structure inside.  
-You can prevent some resources for copying by adding a underscore prefix.
+This folder contains all your ready to use resources like maps, cars, weapons and so on. The build process will copy all this files inside your **BUILD\_DIR** and ****respects your created folder structure inside.  
+You can prevent some resources for copying by adding an underscore prefix.
 
 ```bash
 + yourMap // copy to resources/yourMap

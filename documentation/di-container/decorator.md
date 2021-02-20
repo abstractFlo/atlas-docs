@@ -92,12 +92,12 @@ export class SecondComponent{}
 {% endtabs %}
 
 {% hint style="success" %}
-The example above shows you the magic. Only one line of code for import. Resolve the module from container, autoload all other declared modules and components. This keep your code clean and good looking.
+The example above shows you the magic. Only one line of code for import. Resolve the module from container, autoload all other declared modules and components. This keep your code clean and good-looking.
 {% endhint %}
 
 ### @StringResolver
 
-The **@StringResolver** registers the decorated class as a String InjectionToken inside the decorator.  
+The **@StringResolver** registers the decorated class as a string InjectionToken inside the DI-container.  
 This is needed if you want to resolve a class based on the string constructor name
 
 {% hint style="info" %}

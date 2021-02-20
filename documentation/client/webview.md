@@ -6,7 +6,7 @@ description: Learn more about the Webview Service
 
 ## Introduction
 
-Working with Webviews can manage with this service. We guess, you would love it.
+Working with webviews can be managed with this service. We guess, you will love it.
 
 {% hint style="danger" %}
 Keep in mind, our WebviewService is only working with **SPA \(Single Page Application\)**.
@@ -14,7 +14,7 @@ Keep in mind, our WebviewService is only working with **SPA \(Single Page Applic
 
 ## Setup
 
-The only thing you should do, is setup the webview registry. First argument is the path to your webview, second argument is the event name to change the route.
+The only thing you should do, is set up the webview registry. The first argument is the path to your webview, second argument is the event name to change the route.
 
 {% tabs %}
 {% tab title="bootstrap.ts" %}
@@ -58,7 +58,7 @@ export class PlayerAuthComponent {
 
 ### Available Methods
 
-Here you can find, all available methods if you get the webviewService instance.
+Here you can find all available methods if you get the webviewService instance.
 
 #### getWebView\(\)
 
@@ -105,7 +105,7 @@ this.webviewService.emit('eventName', 'arg1', 'arg2');
 #### on\(eventName: string, listener: \(...args: any\[\]\) =&gt; void\)
 
 {% hint style="warning" %}
-This method is not needed, **@OnGui\(\)** Decorator does the same, but for completeness it is listed here.
+This method is not needed, The **@OnGui\(\)** Decorator does the same, but for completeness it is listed here.
 {% endhint %}
 
 ```typescript

@@ -59,7 +59,7 @@ public doSomeMagicStuff(): void {
 
 ## Command Decorator
 
-Creating sever console commands was not time easier before. You don't need to create them or listen to specific events. Only this decorator is needed.
+Creating sever console commands has never been easier. You don't need to create them or listen to specific events. Only this decorator is needed.
 
 {% hint style="warning" %}
 Avoid using multiple commands with same name. Only the first registered command will be handled.
