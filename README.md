@@ -25,7 +25,7 @@ Our goal is to provide you with a simple system that is easy to understand and i
 * No fixed folder structure
 * Minimalistic setup
   * Unused systems are not loaded even if they are not used
-* Fully integrated [DI-Container](documentation/di-container/) on server/client side
+* Fully integrated [DI-Container](documentation/di-container.md) on server/client side
 * Intuitive helper methods to maintain the performance of your gamemode
   * Sophisticated [Decorators](documentation/decorators/)
   * [Helpful Service classes](documentation/shared/utilsservice.md)

@@ -9,7 +9,7 @@ description: Learn more about the Lifecycle
 There are many scenarios, where you want to wait for the method to be completed before starting another one. That's why we create a custom lifecycle system for booting up the framework. In simple words, the lifecycle is kind of a queue, where each decorator runs after each other in a particular order.
 
 {% hint style="warning" %}
-This lifecycle does not affect the alt:V lifecycle. They only help you perform a different task on different steps.
+This lifecycle does not affect the [alt:V](https://altv.mp/#/) lifecycle. They only help you perform a different task on different steps.
 {% endhint %}
 
 ## Loader
@@ -147,8 +147,8 @@ class YourModule {
     // Last step, print out the loaded vehiles and ped positions
     @AfterBootstrap
     public printLoadedVehicles(done: CallableFunction): void {
-        alt.log(`Successfully loaded ${this.loadedVehicles}`);
-        alt.log(`Successfully loaded ${this.loadedPedPositions}`);
+        UtilsService.log(`Successfully loaded ${this.loadedVehicles}`);
+        UtilsService.log(`Successfully loaded ${this.loadedPedPositions}`);
         done();
     }
 
@@ -156,6 +156,6 @@ class YourModule {
 ```
 
 {% hint style="info" %}
-You can push as much as you want on each queue step. You should only keep in mind, that any step would be call if the before step is finished and in this order: `Sentence doesn't make sense` **@Before** -&gt; **@After** -&gt; **@AfterBootstrap**
+You can push as much as you want on each queue step. You should only keep in mind, that any step would be call if the before step is finished and in this order:  **@Before** -&gt; **@After** -&gt; **@AfterBootstrap**
 {% endhint %}
 

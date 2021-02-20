@@ -4,14 +4,12 @@
 * [Installation](installation/README.md)
   * [Docker Template](installation/docker-template.md)
   * [Vanilla Template](installation/vanilla-template.md)
-  * [Integrate in your own Stack](installation/integrate-in-your-own-stack.md)
 * [FAQ](faq.md)
 
 ## Documentation
 
 * [Lifecycle](documentation/lifecycle.md)
-* [DI-Container](documentation/di-container/README.md)
-  * [Decorator](documentation/di-container/decorator.md)
+* [DI-Container](documentation/di-container.md)
 * [Decorators](documentation/decorators/README.md)
   * [Server](documentation/decorators/decorator.md)
   * [Client](documentation/decorators/client.md)
