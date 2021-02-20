@@ -29,7 +29,6 @@ altLibRegister(alt);
 
 // if you want to use the webviewService
 setupWebviewRegistry('http://192.168.178.26:5000', 'routeChangeEventName');
-
 ```
 {% endtab %}
 
@@ -52,8 +51,6 @@ setupServerConfigPath(resolve('config'));
 
 // if you want to use the DatabaseService, enter your entities here
 setupServerDatabaseEntities([]);
-
-
 ```
 {% endtab %}
 
@@ -82,7 +79,6 @@ setupServerDatabaseEntities([]);
     "user_me_url": "https://discord.com/api/users/@me"
   }
 }
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -108,7 +104,6 @@ UtilsService.eventOn('connectionComplete', () => {
         UtilsService.log('~lg~Booting complete => ~w~Happy Playing');
       });
 });
-
 ```
 {% endtab %}
 
@@ -139,12 +134,11 @@ process.on('uncaughtException', (err) => {
   UtilsService.logError(err.name);
   UtilsService.log('~r~Please close the server and fix the problem~w~');
 });
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% hint style="success" %}
-Now you are able to start using the Framework. Have fun with it ❤ 
+Now you are able to start using the Framework. Have fun with it ❤
 {% endhint %}
 

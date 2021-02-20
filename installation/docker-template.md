@@ -6,14 +6,14 @@ description: Learn more about using the Docker Template
 
 ## Introduction
 
-We don't teach you the installation about docker. Please read the Docker Docs specific for your environment. 
+We don't teach you the installation about docker. Please read the Docker Docs specific for your environment.
 
 ### Step 1
 
 Install the template with [degit](https://www.npmjs.com/package/degit). This tool helps you to clone the starter template
 
 ```bash
-npx degit abstractFlo/atlas-starter-docker gamemode
+npx degit abstractFlo/atlas-starter#docker gamemode
 ```
 
 ### Step 2
@@ -29,6 +29,10 @@ npm install
 
 Set up the required environment variables
 
+{% hint style="warning" %}
+Rename **docker.compose.example.yml** to **docker-compose.ym**l and change this file to fit your needs.
+{% endhint %}
+
 {% tabs %}
 {% tab title=".env" %}
 ```bash
@@ -36,19 +40,16 @@ Set up the required environment variables
 
 # Change variables inside .env to your needs
 
-# Where to store the builded files
-BUILD_DIR=/your/path/for/build/files
-# Path to your project
-DOCKER_PROJECT_PATH=/path/to/files/inside/docker
-# Define branch you want to develop release/rc/dev
-SERVER_BRANCH=release
-
+BUILD_DIR_RESOURCE=dist_resources
+BUILD_DIR_RETAIL=dist_retail
+DOCKER_PROJECT_PATH=./
+SERVER_BRANCH=rc
 ```
 {% endtab %}
 
-{% tab title="docker-data/config/server.cfg" %}
+{% tab title="retail/config/server.cfg" %}
 ```bash
-# rename server.example.cfg to server.cfg
+# rename _server.example.cfg to server.cfg
 
 # Change any key to fit your needs
 name : 'Atlas Dev Server'
@@ -67,13 +68,12 @@ debug : true
 resources : [
     gamemode # setup the name of your resource
 ]
-
 ```
 {% endtab %}
 
-{% tab title="docker-data/config/environment.json" %}
+{% tab title="retail/config/environment.json" %}
 ```bash
-# rename environment.example.json to environment.json
+# rename _environment.example.json to environment.json
 
 # Change any key you want to fit your needs
 {
@@ -99,20 +99,26 @@ resources : [
     "user_me_url": "https://discord.com/api/users/@me"
   }
 }
-
 ```
 {% endtab %}
 {% endtabs %}
 
 ### Step 4
 
-Start the watcher and boot up docker. Keep in mind that your terminals need to point to the root directory.
+Start the watcher or build and boot up docker. Keep in mind that your terminals need to point to the root directory.
+
+{% hint style="warning" %}
+Keep in mind retail folder is only copied at build command. You must be run this command initial.
+{% endhint %}
 
 {% tabs %}
 {% tab title="Terminal 1" %}
 ```bash
-# Inside the first terminal run following command to start the watch
+# If you want to rebuild after changes
 npm run watch
+
+# If you want to build the files
+npm run build
 ```
 {% endtab %}
 
@@ -148,12 +154,12 @@ Congratulation, you have successfully set up your environment. Now it's time to 
 To help you understand how the whole system works, we will explain the structure and configuration options here. The template contains a good starting point to teach yourself.
 
 {% hint style="warning" %}
-There are two folders for your gamemode creation. 
+There are two folders for your gamemode creation.
 {% endhint %}
 
 ### **Resources**
 
-This folder will be bundled by Rollup to ES6 on Server/Client side. Inside the directory you can create folders as many as you want. 
+This folder will be bundled by Rollup to ES6 on Server/Client side. Inside the directory you can create folders as many as you want. Your builded resources lives inside **BUILD\_DIR\_RESOURCE**.
 
 #### package.json
 
@@ -165,10 +171,10 @@ You can create a package.json file inside your folder. This is only needed one t
 {
   # the name for your resource
   "name": "gamemode",
-  
+
   # set true, rollup will bundle it to BUILD_DIR with given name
   "isGameResource": true,
-  
+
   # If you get some errors while bundle up some CJS modules
   # you can define it as external and convertedModules
   # in most cases it would be done automatic
@@ -176,7 +182,7 @@ You can create a package.json file inside your folder. This is only needed one t
     "external": [],
     "convertedModules": []
   },
-  
+
   # If you get some errors while bundle up some CJS modules
   # you can define it as external and convertedModules
   # in most cases it would be done automatic
@@ -185,7 +191,6 @@ You can create a package.json file inside your folder. This is only needed one t
     "convertedModules": []
   }
 }
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -219,7 +224,7 @@ Keep in mind, if you set up a package.json, you need the assets folder as well t
 
 ### **Retail**
 
-This folder contains all your ready to use resources like maps, cars, weapons and so on. The build process will copy all this files inside your **BUILD\_DIR** and ****respects your created folder structure inside.  
+This folder contains all your ready to use resources like maps, cars, weapons and so on. The build process will copy all this files inside your **BUILD\_DIR\_RETAIL** and _\*\*_respects your created folder structure inside.  
 You can prevent some resources for copying by adding an underscore prefix.
 
 ```bash
