@@ -6,10 +6,10 @@ description: Learn more about the Vanilla Template
 
 ## Introduction
 
-If you want to work without docker this template is perfect for you. It bundles all needed files in one folder. The only thing to do is copy and paste to your server and run `npm install` 
+If you want to work without docker this template is perfect for you. It bundles all required files in one folder. The only thing you need to do is copy and paste the folder to your server and run `npm install` 
 
 {% hint style="warning" %}
-This template only provides the build process for your gamemode. To run the server you must be download the server files from [alt:V](https://altv.mp/#/downloads).
+This template only provides the build process for your gamemode. You need to download the server files from [alt:V](https://altv.mp/#/downloads) yourself.
 {% endhint %}
 
 ### Step 1
@@ -106,7 +106,7 @@ resources : [
 Start the watcher or build
 
 {% hint style="warning" %}
-Keep in mind retail folder is only copied at build command. You must be run this command initial.
+Keep in mind that the retail folder is only copied when you execute the build command. You need to run this command initially.
 {% endhint %}
 
 {% tabs %}
@@ -122,7 +122,7 @@ npm run build
 {% endtabs %}
 
 {% hint style="success" %}
-Congratulation, you have successfully set up your environment. Now it's time to create your awesome gamemode.
+Congratulation! You have successfully set up your environment. Now it's time to create your awesome gamemode.
 {% endhint %}
 
 ## Explain Folder Structure
@@ -200,7 +200,7 @@ Keep in mind, if you set up a package.json, you need the assets folder as well t
 
 ### **Retail**
 
-This folder contains all your ready to use resources like maps, cars, weapons and so on. The build process will copy all this files inside your **BUILD\_DIR\_RETAIL** and respects your created folder structure inside. You can prevent some resources for copying by adding an underscore prefix.
+This folder contains all your ready to use resources like maps, cars, weapons and so on. The build process will copy all this files inside your **BUILD\_DIR\_RETAIL** and respects your created folder structure inside. You can prevent resources from copying by adding an underscore prefix.
 
 ```bash
 + yourMap // copy to resources/yourMap

@@ -6,7 +6,7 @@ description: Learn more about Discord Authentication
 
 ## Introduction
 
-Using discord as authentication layer, is fairly simple. There're a few simple steps to integrate this nice feature into your gamemode.
+Using discord as authentication layer, is fairly simple. There are a few simple steps needed to integrate this nice feature into your gamemode.
 
 {% hint style="warning" %}
 Keep in mind, authentication with Discord, has nothing to do with a whitelist or something. It only checks if the user owns a Discord Account with valid credentials.
@@ -30,12 +30,12 @@ This URL must be set inside `environment.json` under `redirect_url` too.
 ![Add Redirect URL](../../../.gitbook/assets/authorization_redirect.png)
 
 {% hint style="success" %}
-That's all for Setup. The Framework does the rest for you.
+That's all for setup. The framework does the rest for you.
 {% endhint %}
 
 ## Example Usage
 
-This is a simple integration inside the connection process for your gamemode. You must be familiar with the setup. This example does not explain the very basic part for creating components. Only the needed components. Any kind of code can be modified to fit your own needs.
+This is a simple integration inside the connection process for your gamemode. You need to be familiar with the setup. This example does not explain the very basic part for creating components. Only the needed components. Any kind of code can be modified to fit your own needs.
 
 {% hint style="warning" %}
 This section describes the usage of our products on each side. This means our framework for server/client and [our CEF implementation with svelte](https://github.com/abstractFlo/altv-svelte-tailwind-typescript). If you have a different setup on CEF side, you can port the Svelte part to your preferred solution.
@@ -44,7 +44,7 @@ This section describes the usage of our products on each side. This means our fr
 ### Server
 
 {% hint style="info" %}
-This is the Server side integration for Discord authentication
+This is the server side integration for Discord authentication
 {% endhint %}
 
 {% tabs %}

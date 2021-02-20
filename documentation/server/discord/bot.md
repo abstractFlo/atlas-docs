@@ -6,7 +6,7 @@ description: Learn more about the Discord Bot
 
 ## Introduction
 
-Integrate a Discord bot to your gamemode can have some benefits for you. Creating a whitelist, use the awesome permission layer from Discord itself for in-game actions, read some server stats, kick players and so on. The list can go further.
+Integrating a Discord bot to your gamemode can achieve some benefits for you. Creating a whitelist, use the awesome permission layer from Discord itself for in-game actions, read some server stats, kick players and so on. The list can go further.
 
 {% hint style="info" %}
 Creating your own bot cannot be simpler than this.

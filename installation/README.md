@@ -11,10 +11,10 @@ The easiest way is to use the template we created for Docker or vanilla usage. H
 
 ### Get the packages
 
-If you want to integrate in your own stack, you can install the packages by yourself without using a template. This only describe the way to get the framework. Not how to setup in your own environment.
+If you want to integrate in your own stack, you can install the packages by yourself without using a template. This only describe the way to get the framework, not how to set up in your own environment.
 
 {% hint style="danger" %}
-Note that the complete setup must be done by you. We suggest to use one of the templates provided by us.
+Note that the complete setup has to be done by you. We suggest using one of the templates provided by us.
 {% endhint %}
 
 ```text
@@ -22,6 +22,6 @@ npm install -D @abstractflo/atlas-server @abstractflo/atlas-client @abstractflo/
 ```
 
 {% hint style="success" %}
-That's all. Needed dependencies installed automatic.
+That's all. All required dependencies are installed automatically.
 {% endhint %}
 
