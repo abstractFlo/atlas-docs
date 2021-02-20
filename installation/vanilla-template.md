@@ -200,7 +200,7 @@ Keep in mind, if you set up a package.json, you need the assets folder as well t
 
 ### **Retail**
 
-This folder contains all your ready to use resources like maps, cars, weapons and so on. The build process will copy all this files inside your **BUILD\_DIR\_RETAIL** and respects your created folder structure inside. You can prevent resources from copying by adding an underscore prefix.
+This folder contains all your ready to use resources like maps, cars, weapons and so on. The build process will copy all this files inside your **BUILD\_DIR\_RETAIL** and respects your created folder structure inside. You can prevent resources from being copied by adding an underscore prefix.
 
 ```bash
 + yourMap // copy to resources/yourMap
