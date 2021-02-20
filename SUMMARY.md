@@ -48,3 +48,9 @@
 * [Atlas Docker Template](https://github.com/abstractFlo/atlas-starter-docker)
 * [Svelte CEF Template](https://github.com/abstractFlo/altv-svelte-tailwind-typescript)
 
+## Recipes
+
+## Snippets
+
+## Scripts
+
