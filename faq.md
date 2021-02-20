@@ -33,5 +33,5 @@ If you teach yourself with TypeScript and anything is confusing, feel free to jo
 
 ## Is there any place where I can find some scripts/snippets/recipes?
 
-Yes it is planned, but at first release of this Framework this section won't be completed or fulfilled. We will publish snippets/scripts/recipes that you can use in your gamemode which will work with the framework. If there is a cool idea, we will integrate the idea directly into our core system. Keep your eyes on the sidebar **Recipes**, **Snippets**, **Scripts** or our _\*\*_[Discord](https://discord.gg/DcpsfkVkfb).
+Yes it is planned, but at first release of this Framework this section won't be completed or fulfilled. We will publish snippets/scripts/recipes that you can use in your gamemode which will work with the framework. If there is a cool idea, we will integrate the idea directly into our core system. Keep your eyes on the sidebar **Recipes**, **Snippets**, **Scripts** or our [Discord](https://discord.gg/DcpsfkVkfb).
 

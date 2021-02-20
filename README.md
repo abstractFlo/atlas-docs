@@ -25,18 +25,18 @@ Our goal is to provide you with a simple system that is easy to understand and i
 * No fixed folder structure
 * Minimalistic setup
   * Unused systems are not loaded even if they are not used
-* Fully integrated [DI-Container](documentation/di-container.md) on server/client side
+* Fully integrated [DI-Container](basic-knowledge/di-container.md) on server/client side
 * Intuitive helper methods to maintain the performance of your gamemode
-  * Sophisticated [Decorators](documentation/decorators/)
-  * [Helpful Service classes](documentation/shared/utilsservice.md)
-* [DatabaseService](documentation/server/database/) for easy use
+  * Sophisticated [Decorators](basic-knowledge/decorators/)
+  * [Helpful Service classes](shared/utilsservice.md)
+* [DatabaseService](server/database/) for easy use
 * Discord
-  * [OAuth Server Integration](documentation/server/discord/authentication.md)
-  * [Bot Integration](documentation/server/discord/bot.md)
+  * [OAuth Server Integration](server/discord/authentication.md)
+  * [Bot Integration](server/discord/bot.md)
 * [Docker Support](https://github.com/abstractFlo/atlas-starter-docker)
 * ES6 Support Server/Client
 * Rollup Module Bundler
   * Creates only one resource for your gamemode script
-* [Own Lifecycle](documentation/lifecycle.md)
+* [Own Lifecycle](basic-knowledge/lifecycle.md)
   * You can run different tasks before someone can play on your server
 
