@@ -19,7 +19,7 @@ This section describes the available methods that you can use.
 
 #### info\(...messages: any\[\]\)
 
-This logs the message 'Your message' as a default log
+This logs the message _'Your message'_ as a default log
 
 ```typescript
 @singleton()
@@ -37,7 +37,7 @@ export class YourClass {
 
 #### warning\(...messages: any\[\]\)
 
-This logs the message 'Your message' as a warning
+This logs the message _'Your message'_ as a warning
 
 ```typescript
 @singleton()
@@ -55,7 +55,7 @@ export class YourClass {
 
 #### error\(...messages: any\[\]\)
 
-This logs the message 'Your message' as an error
+This logs the message _'Your message'_ as an error
 
 ```typescript
 @singleton()
@@ -89,7 +89,7 @@ export class YourClass {
 }
 ```
 
-![Console printed message](../../.gitbook/assets/loggerservice_starting.png)
+![Console printed message](../.gitbook/assets/loggerservice_starting.png)
 
 #### started\(message: string\)
 
@@ -109,5 +109,5 @@ export class YourClass {
 }
 ```
 
-![Console printed message](../../.gitbook/assets/loggerservice_started.png)
+![Console printed message](../.gitbook/assets/loggerservice_started.png)
 

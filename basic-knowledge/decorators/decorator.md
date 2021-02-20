@@ -62,19 +62,19 @@ Only the first parameter is required to identify the triggered colShape. If you 
 // and the entity is a player
 @EntityEnterColShape(ColShapeType.Cylinder, 'myColShape', BaseObjectType.Player)
 public testEnter1(colshape: Colshape, entity: Entity): void {
-  console.log('cylinder, myColShape, player');
+  UtilsService.log('cylinder, myColShape, player');
 }
 
 // Would be triggered if colshape is cylinder with name myColShape
 @EntityEnterColShape(ColShapeType.Cylinder, 'myColShape')
 public testEnter2(colshape: Colshape, entity: Entity): void {
-  console.log('cylinder, myColShape');
+  UtilsService.log('cylinder, myColShape');
 }
 
 // Would be triggered if colshape is cylinder
 @EntityEnterColShape(ColShapeType.Cylinder)
 public testEnter3(colshape: Colshape, entity: Entity): void {
-  console.log('cylinder');
+  UtilsService.log('cylinder');
 }
 ```
 {% endtab %}
@@ -85,19 +85,19 @@ public testEnter3(colshape: Colshape, entity: Entity): void {
 // and the entity is a player
 @EntityLeaveColShape(ColShapeType.Cylinder, 'myColShape', BaseObjectType.Player)
 public testLeave1(colshape: Colshape, entity: Entity): void {
-  console.log('cylinder, myColShape, player');
+  UtilsService.log('cylinder, myColShape, player');
 }
 
 // Would be triggered if colshape is cylinder with name myColShape
 @EntityLeaveColShape(ColShapeType.Cylinder, 'myColShape')
 public testLeave2(colshape: Colshape, entity: Entity): void {
-  console.log('cylinder, myColShape');
+  UtilsService.log('cylinder, myColShape');
 }
 
 // Would be triggered if colshape is cylinder
 @EntityLeaveColShape(ColShapeType.Cylinder)
 public testLeave3(colshape: Colshape, entity: Entity): void {
-  console.log('cylinder');
+  UtilsService.log('cylinder');
 }
 ```
 {% endtab %}

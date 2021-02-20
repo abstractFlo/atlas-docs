@@ -13,7 +13,7 @@ Dealing with a huge amount of objects can be really harde. To make it easier for
 The BasePool is a simple class with some methods. This class is created to use as extend not as instance self.
 
 {% hint style="warning" %}
-The BasePool has two generic types. **T** stands for the entity type you want to store, **K** stands for the key identifier.
+The BasePool has two generic types. **T** stands for the type you want to store, **K** stands for the key identifier.
 {% endhint %}
 
 ```typescript
@@ -124,7 +124,6 @@ export class PlayerPool extends BasePool<Player, string> {}
 
 {% tab title="your.component.ts" %}
 ```typescript
-import { ScriptSyncedMeta } from '@shared/constants';
 import { Player } from 'alt-client';
 import { PlayerPool } from './player.pool';
 import { singleton } from 'tsyringe';

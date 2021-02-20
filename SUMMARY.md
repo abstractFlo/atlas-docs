@@ -1,40 +1,47 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Installation](installation.md)
+* [Installation](installation/README.md)
+  * [Docker Template](installation/docker-template.md)
+  * [Vanilla Template](installation/vanilla-template.md)
 * [FAQ](faq.md)
 
-## Documentation
+## Basic Knowledge
 
-* [Lifecycle](documentation/lifecycle.md)
-* [DI-Container](documentation/di-container/README.md)
-  * [Decorator](documentation/di-container/decorator.md)
-* [Decorators](documentation/decorators/README.md)
-  * [Server](documentation/decorators/decorator.md)
-  * [Client](documentation/decorators/client.md)
-  * [Both Sides](documentation/decorators/both-sides.md)
-* [Server](documentation/server/README.md)
-  * [Configuration](documentation/server/configuration.md)
-  * [Database](documentation/server/database/README.md)
-    * [Base Service](documentation/server/database/base-service.md)
-  * [Encryption](documentation/server/encryption.md)
-  * [Event Service](documentation/server/eventservice.md)
-  * [Discord](documentation/server/discord/README.md)
-    * [Authentication](documentation/server/discord/authentication.md)
-    * [Bot](documentation/server/discord/bot.md)
-    * [Guild Service](documentation/server/discord/guild-service.md)
-  * [Extends](documentation/server/extends.md)
-* [Client](documentation/client/README.md)
-  * [Decorator](documentation/client/decorator.md)
-  * [Event Service](documentation/client/eventservice.md)
-  * [Webview Service](documentation/client/webview.md)
-  * [Extends](documentation/client/extended-entities.md)
-* [Shared](documentation/shared/README.md)
-  * [Constants](documentation/shared/constants.md)
-  * [JSON Entity Model](documentation/shared/json-entity-model.md)
-  * [Base Pool](documentation/shared/pools.md)
-  * [LoggerService](documentation/shared/loggerservice.md)
-  * [UtilsService](documentation/shared/utilsservice.md)
+* [Lifecycle](basic-knowledge/lifecycle.md)
+* [DI-Container](basic-knowledge/di-container.md)
+* [Decorators](basic-knowledge/decorators/README.md)
+  * [Server](basic-knowledge/decorators/decorator.md)
+  * [Client](basic-knowledge/decorators/client.md)
+  * [Both Sides](basic-knowledge/decorators/both-sides.md)
+
+## Server
+
+* [Configuration](server/configuration.md)
+* [Database](server/database/README.md)
+  * [Base Service](server/database/base-service.md)
+* [Event Service](server/eventservice.md)
+* [Discord](server/discord/README.md)
+  * [Authentication](server/discord/authentication.md)
+  * [Bot](server/discord/bot.md)
+  * [Guild Service](server/discord/guild-service.md)
+* [Encryption](server/encryption.md)
+* [Extends](server/extends.md)
+
+## Client
+
+* [Decorator](client/decorator.md)
+* [Event Service](client/eventservice.md)
+* [Webview Service](client/webview.md)
+* [Extends](client/extended-entities.md)
+
+## Shared
+
+* [Constants](shared/constants.md)
+* [LoggerService](shared/loggerservice.md)
+* [UtilsService](shared/utilsservice.md)
+* [Base Pool](shared/pools.md)
+* [JSON Entity Model](shared/json-entity-model.md)
 
 ## External Links
 
