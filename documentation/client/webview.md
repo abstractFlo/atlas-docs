@@ -117,7 +117,7 @@ this.webviewService.on('eventName', (...args: any[]) => {
 
 ```typescript
 // Destroy the webview
-this.webviewService.showCursor();
+this.webviewService.destroy();
 ```
 
 #### focus\(\)
