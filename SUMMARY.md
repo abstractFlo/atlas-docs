@@ -45,6 +45,7 @@
 
 * [alt:V Official](https://altv.mp)
 * [Project Atlas Discord](https://discord.gg/DcpsfkVkfb)
-* [Atlas Docker Template](https://github.com/abstractFlo/atlas-starter-docker)
+* [Atlas Framework](https://github.com/abstractFlo/atlas)
+* [Atlas Starter Templates](https://github.com/abstractFlo/atlas-starter)
 * [Svelte CEF Template](https://github.com/abstractFlo/altv-svelte-tailwind-typescript)
 

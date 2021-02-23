@@ -6,7 +6,7 @@ description: Learn more about the Vanilla Template
 
 ## Introduction
 
-If you want to work without docker this template is perfect for you. It bundles all required files in one folder. The only thing you need to do is copy and paste the folder to your server and run `npm install` 
+If you want to work without docker this template is perfect for you. It bundles all required files in one folder. The only thing you need to do is copy and paste the folder to your server and run `npm install`
 
 {% hint style="warning" %}
 This template only provides the build process for your gamemode. You need to download the server files from [alt:V](https://altv.mp/#/downloads) yourself.
