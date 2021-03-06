@@ -47,7 +47,7 @@ The base configuration is our minimal setup to run all the framework stuff. Keep
 Getting a parameter from the config file is quite simple. Use the power of Dependency Injection, and you're ready to go.
 
 {% hint style="success" %}
-You can get nested elements by separate the child with a dot.
+You can get nested elements by seperating the child with a dot.
 {% endhint %}
 
 ```javascript
@@ -60,8 +60,8 @@ export class MyComponent {
 
     // Work with the resolved class
     public yourMethod(): void {
-        const myValue = this.configservice.get('discord.auth_token_url');
-        // now lives inside myValue the auth_token_url
+        const myValue = this.configService.get('discord.auth_token_url');
+        // myValue is now the value of auth_token_url
     }
 }
 ```
@@ -80,14 +80,14 @@ export class MyComponent {
 
     // Work with the resolved class
     public yourMethod(): void {
-        const myValue = this.configservice.get('discord');
-        // now lives inside myValue the complete discord config section
+        const myValue = this.configService.get('discord');
+        // myValue is now the whole discord config object
     }
 }
 ```
 
 {% hint style="success" %}
-In some cases, you want to get the default value. For example, your required param is empty or does not exist.
+In some cases, you want to get the default value. For example, when your required param is empty or does not exist.
 {% endhint %}
 
 ```javascript
@@ -100,8 +100,8 @@ export class MyComponent {
 
     // Work with the resolved class
     public yourMethod(): void {
-        const myValue = this.configservice.get('param.not.exists', 'defaultValue');
-        // now lives inside myValue the string 'defaultValue'
+        const myValue = this.configService.get('param.not.exists', 'defaultValue');
+        // myValue is now the string 'defaultValue'
     }
 }
 ```
@@ -119,8 +119,8 @@ export class MyComponent {
 
     // Work with the resolved class
     public yourMethod(): void {
-        this.configservice.set('hello', 'world');
-        // now you have create an config key 'hello' with the value 'world'
+        this.configService.set('hello', 'world');
+        // now you have created the config key 'hello' with the value 'world'
     }
 }
 ```

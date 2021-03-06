@@ -109,7 +109,7 @@ This method is not needed, The **@OnGui\(\)** Decorator does the same, but for c
 ```typescript
 // Listen to event from webView
 this.webviewService.on('eventName', (...args: any[]) => {
-    // Do whatever you w
+    // Do whatever you want
 });
 ```
 

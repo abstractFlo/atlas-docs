@@ -30,7 +30,7 @@ npm install
 Set up the required environment variables
 
 {% hint style="warning" %}
-Rename **docker.compose.example.yml** to **docker-compose.ym**l and change this file to fit your needs.
+Rename **docker.compose.example.yml** to **docker-compose.ym**l and change this file to fit your needs. Change **\_config** folder to **config** as well.
 {% endhint %}
 
 {% tabs %}
@@ -224,7 +224,8 @@ Keep in mind, if you set up a package.json, you need the assets folder as well t
 
 ### **Retail**
 
-This folder contains all your ready to use resources like maps, cars, weapons and so on. The build process will copy all this files inside your **BUILD\_DIR\_RETAIL** and _\*\*_respects your created folder structure inside.  
+This folder contains all your ready to use resources like maps, cars, weapons and so on. The build process will copy all this files inside your **BUILD\_DIR\_RETAIL** and respects your created folder structure inside.  
+  
 You can prevent some resources for copying by adding an underscore prefix.
 
 ```bash

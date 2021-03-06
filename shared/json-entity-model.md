@@ -34,7 +34,7 @@ export interface CastConfig {
 
 ```typescript
 class UserModel extends JsonEntityModel {
-  @Cast({ property: 'idRSUUser', from: castToNumber() })
+  @Cast({ property: 'idUser', from: castToNumber() })
   id: number | null = null;
 
   @Cast()
@@ -48,7 +48,7 @@ class UserModel extends JsonEntityModel {
 }
 
 const user1 = new UserModel().cast({
-  idRSUUser: '42',
+  idUser: '42',
   nickname: null,
   username: 'user_name',
   age: 26

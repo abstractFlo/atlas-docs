@@ -79,7 +79,7 @@ public world(): void {
 
 @Cmd()
 public world(): void {
-    // called if you write /hello inside your server console
+    // called if you write /world inside your server console
 }
 ```
 
