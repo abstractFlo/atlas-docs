@@ -30,7 +30,7 @@ npm install
 Set up the required environment variables
 
 {% hint style="warning" %}
-Rename **docker.compose.example.yml** to **docker-compose.ym**l and change this file to fit your needs. Change **\_config** folder to **config** as well.
+Rename **docker.compose.example.yml** to **docker-compose.ym**l and change this file to fit your needs. Change **retail/server.example.cfg** folder to **retail/server.cfg** and **.env.example** to **.env** as well.
 {% endhint %}
 
 {% tabs %}
@@ -47,7 +47,7 @@ SERVER_BRANCH=rc
 ```
 {% endtab %}
 
-{% tab title="retail/config/server.cfg" %}
+{% tab title="retail/server.cfg" %}
 ```bash
 # rename _server.example.cfg to server.cfg
 
@@ -71,34 +71,56 @@ resources : [
 ```
 {% endtab %}
 
-{% tab title="retail/config/environment.json" %}
+{% tab title="" %}
 ```bash
-# rename _environment.example.json to environment.json
+# Describe which branch you want to use for serverfiles only needed if 
+# you use docker, otherwise it is ignored
+SERVER_BRANCH=rc
 
-# Change any key you want to fit your needs
-{
-  "database": {
-    "name": "default",
-    "type": "mysql",
-    "host": "altv-mysql",
-    "port": 3306,
-    "username": "gamemode",
-    "password": "demo123",
-    "database": "gamemode",
-    "synchronize": true,
-    "logging": false
-  },
-  "discord": {
-    "client_id": "",
-    "client_secret": "",
-    "bot_secret": "",
-    "server_id": "",
-    "redirect_url": "http://127.0.0.1:1337/auth/discord",
-    "auth_url": "https://discord.com/api/oauth2/authorize",
-    "auth_token_url": "https://discord.com/api/oauth2/token",
-    "user_me_url": "https://discord.com/api/users/@me"
-  }
-}
+# Where to store the builded files
+ATLAS_BUILD_OUPUT=dist
+
+# Clear the build dir before new build is triggered
+# only for build not for watch
+ATLAS_CLEAR_BEFORE_BUILD=true
+
+# Define which files would be preserve for clean up
+# Base server files already preserved
+ATLAS_CLEAR_PRESERVE=null
+
+# Path to this project, only needed if you using the docker starter
+# Otherwise it is ignored
+ATLAS_PROJECT_PATH=.
+
+# Set atlas to production, this means the build files would be minimized
+ATLAS_PRODUCTION=true
+
+# Describe the folder where your resources live for building
+ATLAS_RESOURCE_FOLDER=resources
+
+# Describe where your static resources live
+ATLAS_RETAIL_FOLDER=retail
+
+# Setup your database stuff
+DB_CONNECTION=mysql
+DB_HOST=altv-mysql
+DB_USER=gamemode
+DB_PORT=3306
+DB_PASS=demo123
+DB_DATABASE=gamemode
+DB_SYNCRONIZE=true
+DB_LOGGING=false
+
+# Setup all variables to your needs to start api-server
+DISCORD_API_PORT=null
+DISCORD_CLIENT_ID=null
+DISCORD_CLIENT_SECRET=null
+DISCORD_REDIRECT_URL=http://127.0.0.1:1337
+
+# Setup the discord bot stuff
+DISCORD_BOT_SECRET=null
+DISCORD_SERVER_ID=null
+
 ```
 {% endtab %}
 {% endtabs %}
@@ -136,7 +158,7 @@ docker-compose up -d
 ```bash
 # connect to your server container and start the server if you want
 docker exec -it altv bash
-./start_server.sh
+./start.sh
 ```
 {% endtab %}
 {% endtabs %}
@@ -159,7 +181,7 @@ There are two folders for your gamemode creation.
 
 ### **Resources**
 
-This folder will be bundled by Rollup to ES6 on Server/Client side. Inside the directory you can create folders as many as you want. Your builded resources lives inside **BUILD\_DIR\_RESOURCE**.
+This folder will be bundled by Rollup to ES6 on Server/Client side. Inside the directory you can create folders as many as you want. Your builded resources lives inside **ATLAS\_BUILD\_OUPUT**.
 
 #### package.json
 
@@ -174,22 +196,14 @@ You can create a package.json file inside your folder. This is only needed one t
 
   # set true, rollup will bundle it to BUILD_DIR with given name
   "isGameResource": true,
-
-  # If you get some errors while bundle up some CJS modules
-  # you can define it as external and convertedModules
-  # in most cases it would be done automatic
-  "server": {
-    "external": [],
-    "convertedModules": []
-  },
-
-  # If you get some errors while bundle up some CJS modules
-  # you can define it as external and convertedModules
-  # in most cases it would be done automatic
-  "client": {
-    "external": [],
-    "convertedModules": []
-  }
+  
+  # Define some externals if you want
+  # this is most time not needed
+  "external": [],
+  
+  # Define all modules they would converted to default import
+  # this is most time not needed
+  "convert": []
 }
 ```
 {% endtab %}
@@ -224,8 +238,8 @@ Keep in mind, if you set up a package.json, you need the assets folder as well t
 
 ### **Retail**
 
-This folder contains all your ready to use resources like maps, cars, weapons and so on. The build process will copy all this files inside your **BUILD\_DIR\_RETAIL** and respects your created folder structure inside.  
-  
+This folder contains all your ready to use resources like maps, cars, weapons and so on. The build process will copy all this files inside your **ATLAS\_BUILD\_OUPUT** and respects your created folder structure inside.
+
 You can prevent some resources for copying by adding an underscore prefix.
 
 ```bash
