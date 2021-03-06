@@ -14,6 +14,10 @@ Wishes and ideas can be posted inside [\#ideas-and-features](https://discord.gg/
 
 ## Basic Usage
 
+{% hint style="danger" %}
+Actually not implemented!
+{% endhint %}
+
 Working with the guild service is fairly simple. Create a new class and extend the guild service.
 
 {% hint style="success" %}

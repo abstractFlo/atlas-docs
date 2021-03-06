@@ -23,11 +23,12 @@ This is available on the server and client side
 {% tabs %}
 {% tab title="Server" %}
 ```typescript
+import { LoaderService } from '@abstractflo/atlas-server';
 const loader = container.resolve(LoaderService);
 
 loader
     .bootstrap(ServerModule)
-    .afterComplete(() => {
+    .done(() => {
         // This method is called, if the lifecycle finished
     });
 ```
@@ -35,11 +36,12 @@ loader
 
 {% tab title="Client" %}
 ```typescript
+import { LoaderService } from '@abstractflo/atlas-client';
 const loader = container.resolve(LoaderService);
 
 loader
     .bootstrap(ClientModule)
-    .afterComplete(() => {
+    .done(() => {
         // This method is called, if the lifecycle is finished
         // You can send an event to server to inform the player is ready
         // Example:
@@ -86,25 +88,32 @@ public task(done: CallableFunction): void {
 ```
 {% endtab %}
 
-{% tab title="@AfterBootstrap\(\)" %}
+{% tab title="@AutloadBefore" %}
 ```typescript
-@AfterBootstrap()
-public task(done: CallableFunction): void {
-    setTimeout(() => {
+// Load yourMethod before the bootstrap is started with a available timeout
+// about 10000ms
+@AutoloadBefore({methodName: 'yourMethod', doneCheckTimeout: 10000})
+export class YourFile {
+
+    public yourMethod(done: CallableFunction): void {
         done();
-    }, 5000)
+    }
+
 }
 ```
 {% endtab %}
 
-{% tab title="@Before\(\) with higher duration time" %}
+{% tab title="AutloadAfter" %}
 ```typescript
-// The done callback must be called within 25000ms
-@Before(25000)
-public heavyTask(done: CallableFunction): void {
-    setTimeout(() => {
+// Load yourMethod after the bootstrap is complete with a available timeout
+// about 10000ms
+@AutoloadAfter({methodName: 'yourMethod', doneCheckTimeout: 10000})
+export class YourFile {
+
+    public yourMethod(done: CallableFunction): void {
         done();
-    }, 20000)
+    }
+
 }
 ```
 {% endtab %}

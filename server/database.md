@@ -15,29 +15,21 @@ We don't teach you the interaction and creation of databases. If you have any qu
 
 ## How to use
 
-Using the DatabaseService is fairly simple. Only add database entities, and the service is starting for you.
-
-{% hint style="warning" %}
-If you don't need a database, remove **setupServerDatabaseEntities** from **bootstrap.ts**
-{% endhint %}
+Using the DatabaseService is fairly simple. Create your entities, add the new [@AutoAdd](database.md#autoadd) decorator and use your entity as normal.
 
 {% tabs %}
-{% tab title="index.ts" %}
+{% tab title="your.entity.ts" %}
 ```typescript
-import '@abraham/reflection';
-import './bootstrap';
-// ... other imports and stuff for server start
-```
-{% endtab %}
+@AutoAdd()
+@Entity('yours')
+export class YourEntity {
 
-{% tab title="bootstrap.ts" %}
-```typescript
-import { setupServerDatabaseEntities } from '@abstractFlo/shared';
-import { YourEntity } from 'path/to/your/your.entity';
+  @PrimaryGeneratedColumn()
+  id: number;
 
-setupServerDatabaseEntities([
-  YourEntity
-]);
+  @Column()
+  name: string;
+}
 ```
 {% endtab %}
 
@@ -121,4 +113,25 @@ export class ExampleService {
 {% hint style="success" %}
 If you're not familiar with TypeORM, feel free to check out our sample gamemode and see how we use it.
 {% endhint %}
+
+### @AutoAdd
+
+This is a new decorator to provide a simple way for adding new Entities to your database service. Only add this to your TypeORM Entity and use this entity as expected. This decorator registered the entity for you.
+
+{% tabs %}
+{% tab title="your.entity.ts" %}
+```typescript
+@AutoAdd()
+@Entity('yours')
+export class YourEntity {
+
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  name: string;
+}
+```
+{% endtab %}
+{% endtabs %}
 

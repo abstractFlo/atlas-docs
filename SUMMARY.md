@@ -17,7 +17,6 @@
 
 ## Server
 
-* [Configuration](server/configuration.md)
 * [Database](server/database.md)
 * [Event Service](server/eventservice.md)
 * [Discord](server/discord/README.md)

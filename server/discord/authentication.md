@@ -20,12 +20,12 @@ Go to [https://discord.com/developers/applications](https://discord.com/develope
 
 #### Step 2
 
-Visit the **General Information** Page and store the **Client ID** and **Client Secret** inside your `environment.json`
+Visit the **General Information** Page and store the **Client ID** and **Client Secret** inside your `.env`
 
 #### Step 3
 
 Go to OAuth 2 and set up the redirect URL and press save.  
-This URL must be set inside `environment.json` under `redirect_url` too.
+This URL must be set inside `.env` under `DISCORD_REDIRECT_URL` too.
 
 ![Add Redirect URL](../../.gitbook/assets/authorization_redirect.png)
 

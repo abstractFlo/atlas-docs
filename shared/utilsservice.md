@@ -180,6 +180,31 @@ UtilsService.logUnloaded('your message')
 // UtilsService.log(`Unloaded ~lg~${message}~w~`))
 ```
 
+#### logRegisteredHandlers\(name: string, length: number\)
+
+This method is used internal
+
+```typescript
+UtilsService.logRegisteredHandlersloaded('YourService', 10)
+// UtilsService.log(`Registered all handlers for ~lg~${name}~w~ - ~y~[${length}]~w~`);
+```
+
+#### isProduction\(toggle: boolean = false\)
+
+Setup the production mode only needed clientside, serverside is setup by .env variable
+
+```typescript
+UtilsService.isProduction(true)
+```
+
+#### setCommandPrefix\(prefix: string\)
+
+Change the prefix for commands, base is `/` 
+
+```typescript
+UtilsService.setCommandPrefix('!')
+```
+
 ### Event Helpers
 
 {% hint style="danger" %}

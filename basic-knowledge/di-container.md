@@ -75,7 +75,6 @@ container.resolve(FirstModule)
     imports: [SecondModule],
     components: [FirstComponent]
 })
-@singleton()
 export class FirstModule {}
 ```
 {% endtab %}
@@ -85,21 +84,20 @@ export class FirstModule {}
 @Module({
     components: [SecondComponent]
 })
-@singleton()
 export class SecondModule{}
 ```
 {% endtab %}
 
 {% tab title="first.component.ts" %}
 ```typescript
-@singleton()
+@Component()
 export class FirstComponent{}
 ```
 {% endtab %}
 
 {% tab title="second.component.ts" %}
 ```typescript
-@singleton()
+@Component()
 export class SecondComponent{}
 ```
 {% endtab %}
@@ -108,6 +106,19 @@ export class SecondComponent{}
 {% hint style="success" %}
 The example above shows you the magic. Only one line of code for import. Resolve the module from container, autoload all other declared modules and components. This keep your code clean and good-looking.
 {% endhint %}
+
+### @Component
+
+This **@Component** decorator is a simple decorator for readable code. It is the same as [@singleton](di-container.md#singleton) but fits the framework read language better
+
+{% tabs %}
+{% tab title="your.component.ts" %}
+```typescript
+@Component()
+export class YourComponent{}
+```
+{% endtab %}
+{% endtabs %}
 
 ### @StringResolver
 
