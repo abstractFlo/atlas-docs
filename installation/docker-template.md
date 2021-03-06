@@ -36,43 +36,6 @@ Rename **docker.compose.example.yml** to **docker-compose.ym**l and change this 
 {% tabs %}
 {% tab title=".env" %}
 ```bash
-# Rename .env.example to .env
-
-# Change variables inside .env to your needs
-
-BUILD_DIR_RESOURCE=dist_resources
-BUILD_DIR_RETAIL=dist_retail
-DOCKER_PROJECT_PATH=./
-SERVER_BRANCH=rc
-```
-{% endtab %}
-
-{% tab title="retail/server.cfg" %}
-```bash
-# rename _server.example.cfg to server.cfg
-
-# Change any key to fit your needs
-name : 'Atlas Dev Server'
-host : 0.0.0.0
-port : 7788
-players : 10
-#password: cometest
-announce : false
-#token: yourToken
-gamemode : anything
-website : example.com
-language : en
-description : 'DevServer - Play with alt:v and atlas Framework'
-modules : [ js-module ]
-debug : true
-resources : [
-    gamemode # setup the name of your resource
-]
-```
-{% endtab %}
-
-{% tab title="" %}
-```bash
 # Describe which branch you want to use for serverfiles only needed if 
 # you use docker, otherwise it is ignored
 SERVER_BRANCH=rc
@@ -120,7 +83,30 @@ DISCORD_REDIRECT_URL=http://127.0.0.1:1337
 # Setup the discord bot stuff
 DISCORD_BOT_SECRET=null
 DISCORD_SERVER_ID=null
+```
+{% endtab %}
 
+{% tab title="retail/server.cfg" %}
+```bash
+# rename _server.example.cfg to server.cfg
+
+# Change any key to fit your needs
+name : 'Atlas Dev Server'
+host : 0.0.0.0
+port : 7788
+players : 10
+#password: cometest
+announce : false
+#token: yourToken
+gamemode : anything
+website : example.com
+language : en
+description : 'DevServer - Play with alt:v and atlas Framework'
+modules : [ js-module ]
+debug : true
+resources : [
+    gamemode # setup the name of your resource
+]
 ```
 {% endtab %}
 {% endtabs %}
@@ -196,11 +182,11 @@ You can create a package.json file inside your folder. This is only needed one t
 
   # set true, rollup will bundle it to BUILD_DIR with given name
   "isGameResource": true,
-  
+
   # Define some externals if you want
   # this is most time not needed
   "external": [],
-  
+
   # Define all modules they would converted to default import
   # this is most time not needed
   "convert": []

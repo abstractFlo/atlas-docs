@@ -199,7 +199,7 @@ UtilsService.isProduction(true)
 
 #### setCommandPrefix\(prefix: string\)
 
-Change the prefix for commands, base is `/` 
+Change the prefix for commands, base is `/`
 
 ```typescript
 UtilsService.setCommandPrefix('!')

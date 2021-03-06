@@ -160,11 +160,11 @@ You can create a package.json file inside your folder. This is only needed one t
 
   # set true, rollup will bundle it to BUILD_DIR with given name
   "isGameResource": true,
-  
+
   # Define some externals if you want
   # this is most time not needed
   "external": [],
-  
+
   # Define all modules they would converted to default import
   # this is most time not needed
   "convert": []
