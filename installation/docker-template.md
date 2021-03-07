@@ -1,19 +1,23 @@
 ---
-description: Learn more about using the Docker Template
+description: Learn more about using the StartingTemplate
 ---
 
-# Docker Template
+# Starting Template
 
 ## Introduction
 
+The starting template provide the easiest way to dive in the Atlas World. This template provide the ability for docker and vanilla. Choose what ever you want.
+
+{% hint style="warning" %}
 We don't teach you the installation about docker. Please read the Docker Docs specific for your environment.
+{% endhint %}
 
 ### Step 1
 
 Install the template with [degit](https://www.npmjs.com/package/degit). This tool helps you to clone the starter template
 
 ```bash
-npx degit abstractFlo/atlas-starter#docker gamemode
+npx degit abstractFlo/atlas-starter gamemode
 ```
 
 ### Step 2
@@ -30,7 +34,13 @@ npm install
 Set up the required environment variables
 
 {% hint style="warning" %}
-Rename **docker.compose.example.yml** to **docker-compose.ym**l and change this file to fit your needs. Change **retail/server.example.cfg** folder to **retail/server.cfg** and **.env.example** to **.env** as well.
+Change **retail/server.example.cfg** folder to **retail/server.cfg** and **.env.example** to **.env** as well.
+{% endhint %}
+
+{% hint style="danger" %}
+### **If you want using docker**
+
+Rename **docker.compose.example.yml** to **docker-compose.yml** and change this file to fit your needs.
 {% endhint %}
 
 {% tabs %}
@@ -129,8 +139,12 @@ npm run watch
 npm run build
 ```
 {% endtab %}
+{% endtabs %}
 
-{% tab title="Terminal 2" %}
+#### For docker user
+
+{% tabs %}
+{% tab title="Terminal 1" %}
 ```bash
 # Inside the second terminal, bootup docker
 docker-compose up
@@ -140,7 +154,7 @@ docker-compose up -d
 ```
 {% endtab %}
 
-{% tab title="Terminal 3" %}
+{% tab title="Terminal 2" %}
 ```bash
 # connect to your server container and start the server if you want
 docker exec -it altv bash
@@ -167,7 +181,7 @@ There are two folders for your gamemode creation.
 
 ### **Resources**
 
-This folder will be bundled by Rollup to ES6 on Server/Client side. Inside the directory you can create folders as many as you want. Your builded resources lives inside **ATLAS\_BUILD\_OUPUT**.
+This folder will be bundled by Rollup to ES6 on Server/Client side. Inside the directory you can create folders as many as you want. Your builded resources lives inside **ATLAS\_BUILD\_OUTPUT**.
 
 #### package.json
 
@@ -224,7 +238,7 @@ Keep in mind, if you set up a package.json, you need the assets folder as well t
 
 ### **Retail**
 
-This folder contains all your ready to use resources like maps, cars, weapons and so on. The build process will copy all this files inside your **ATLAS\_BUILD\_OUPUT** and respects your created folder structure inside.
+This folder contains all your ready to use resources like maps, cars, weapons and so on. The build process will copy all this files inside your **ATLAS\_BUILD\_OUTPUT** and respects your created folder structure inside.
 
 You can prevent some resources for copying by adding an underscore prefix.
 

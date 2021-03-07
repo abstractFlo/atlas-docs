@@ -2,8 +2,7 @@
 
 * [Introduction](README.md)
 * [Installation](installation/README.md)
-  * [Docker Template](installation/docker-template.md)
-  * [Vanilla Template](installation/vanilla-template.md)
+  * [Starting Template](installation/docker-template.md)
 * [FAQ](faq.md)
 
 ## Basic Knowledge
