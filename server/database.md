@@ -7,7 +7,7 @@ description: Learn more about the Database
 ## Introduction
 
 Our Framework has support for a wide range of database systems. This is provided by [TypeORM](https://typeorm.io/#/).  
-The DatabaseService is ready to use for your gamemode. Set up your credentials inside the environment.json and start using the service.
+The DatabaseService is ready to use for your gamemode. Set up your credentials inside the `.env` and start using the service.
 
 {% hint style="warning" %}
 We don't teach you the interaction and creation of databases. If you have any questions about database basics, you should take a look at the [docs](https://typeorm.io/#/).
