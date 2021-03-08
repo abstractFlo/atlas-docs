@@ -201,10 +201,6 @@ export class ExampleService {
 {% endtab %}
 {% endtabs %}
 
-{% hint style="success" %}
-If you're not familiar with TypeORM, feel free to check out our sample gamemode and see how we use it.
-{% endhint %}
-
 ### @AutoAdd
 
 This is a new decorator to provide a simple way for adding new Entities to your database service. Only add this to your TypeORM Entity and use this entity as expected. This decorator registered the entity for you.
