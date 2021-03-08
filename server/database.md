@@ -18,7 +18,7 @@ We don't teach you the interaction and creation of databases. If you have any qu
 We chose TypeORM because the syntax is relatively easy for everyone to understand. But we also have to point out that some things in TypeORM are not really cleanly solved. In the following we would like to point out what you have to pay attention to when you work with TypeORM.
 
 * By nature, TypeORM creates a circular dependency when setting up a bi-directional relationship between 2 models. In ES modules circular dependencies are allowed. The compiler will warn you about this, but as long as this warning is limited to your entities, you don't need to worry.
-* It can happen that you get the following error message when starting the server `XXX cannot access before initialization` This is also a known problem "admittedly also a very annoying one" but also we can't work around this at the moment, because we have no influence on when which entity is registered in the config by the decorator. If you get this error, then go into the model in question and make your import a string import. You will lose the type safety but this is the only way to get the problem under control.
+* It can happen that you get the following error message when starting the server `XXX cannot access before initialization` This is also a known problem "admittedly also a very annoying one" but also we can't work around this at the moment, because we have no influence on when which entity is registered in the config by the decorator. If you get this error, then go into the model in concern and make your import a string import. You will lose the type safety but this is the only way to get the problem under control.
 
 #### Example for String Imports
 
