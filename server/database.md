@@ -13,6 +13,97 @@ The DatabaseService is ready to use for your gamemode. Set up your credentials i
 We don't teach you the interaction and creation of databases. If you have any questions about database basics, you should take a look at the [docs](https://typeorm.io/#/).
 {% endhint %}
 
+### Before you start
+
+We chose TypeORM because the syntax is relatively easy for everyone to understand. But we also have to point out that some things in TypeORM are not really cleanly solved. In the following we would like to point out what you have to pay attention to when you work with TypeORM.
+
+* By nature, TypeORM creates a circular dependency when setting up a bi-directional relationship between 2 models. In ES modules circular dependencies are allowed. The compiler will warn you about this, but as long as this warning is limited to your entities, you don't need to worry.
+* It can happen that you get the following error message when starting the server `XXX cannot access before initialization` This is also a known problem "admittedly also a very annoying one" but also we can't work around this at the moment, because we have no influence on when which entity is registered in the config by the decorator. If you get this error, then go into the model in question and make your import a string import. You will lose the type safety but this is the only way to get the problem under control.
+
+#### Example for String Imports
+
+{% tabs %}
+{% tab title="first.entity.ts" %}
+```typescript
+/**
+ * The TypeORM Way describe in docs
+ */
+@AutoAdd()
+@Entity('firsts')
+export class FirstEntity {
+
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  name: string;
+  
+  @OneToMany(() => Second, second => second.first)
+  seconds: Second[]
+}
+
+/**
+ * Our Way not described in TypeORM Docs
+ */
+@AutoAdd()
+@Entity('firsts')
+export class FirstEntity {
+
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  name: string;
+  
+  @OneToMany(() => Second, second => second.first)
+  seconds: 'Second'[]
+}
+```
+{% endtab %}
+
+{% tab title="second.model.ts" %}
+```typescript
+/**
+ * The TypeORM Way describe in docs
+ */
+@AutoAdd()
+@Entity('seconds')
+export class SecondEntity {
+
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  name: string;
+  
+  @ManyToOne(() => First, first => first.seconds)
+  first: First
+}
+
+/**
+ * Our Way not described in TypeORM Docs
+ */
+@AutoAdd()
+@Entity('seconds')
+export class SecondEntity {
+
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  name: string;
+  
+  @ManyToOne(() => First, first => first.seconds)
+  first: 'First'
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% hint style="info" %}
+If you known a better TypeScript Based ORM, [let us know about it](https://discord.gg/DcpsfkVkfb). We searching for a better alternative to solve this problems.
+{% endhint %}
+
 ## How to use
 
 Using the DatabaseService is fairly simple. Create your entities, add the new [@AutoAdd](database.md#autoadd) decorator and use your entity as normal.
