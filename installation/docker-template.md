@@ -249,3 +249,9 @@ You can prevent some resources for copying by adding an underscore prefix.
 + _notCopied // prevent copy
 ```
 
+## Using Database
+
+If you want to use the DatabaseService, keep in mind that we don't ship the needed driver. Only TypeORM is shipped. Please install your needed driver as self like `mysql`.
+
+You can read more about it on [TypeORM Documentation](https://typeorm.io/#/) inside the Installation section of his docs.
+
