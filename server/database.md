@@ -100,6 +100,14 @@ export class SecondEntity {
 {% endtab %}
 {% endtabs %}
 
+#### Another solution that works but also does not feel perfect
+
+You can create an entry point file for your models and define the exports in the right order. I feels not really  good, but you don't lose the Typings. We don't know how complicated it is with more and more models. But try and error can solve the problem with the right order.
+
+You can see a working example on the picture below. Keep in mind, if you change the order inside `index.ts` they would not work anymore
+
+![](../.gitbook/assets/entry-point-database-model.png)
+
 {% hint style="info" %}
 If you known a better TypeScript Based ORM, [let us know about it](https://discord.gg/DcpsfkVkfb). We searching for a better alternative to solve this problems.
 {% endhint %}
