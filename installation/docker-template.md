@@ -29,6 +29,20 @@ cd gamemode
 npm install
 ```
 
+### Step 2.1
+
+We love mysql &lt;3, thats why our Docker Template shipped out with a mysql service. You can change this to what ever you want but for fast startup you can use as it is. 
+
+If you want using mysql please install the mysql dependency as well.
+
+```bash
+npm install mysql 
+
+# or
+
+npm install mysql2
+```
+
 ### Step 3
 
 Set up the required environment variables
