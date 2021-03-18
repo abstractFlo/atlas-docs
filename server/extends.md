@@ -16,7 +16,7 @@ Extending classes in TypeScript is done by overriding the prototype of a class l
 
 ### alt.Player
 
-We created 2 methods that are available on each Player Instance.
+We created some methods that are available on each Player Instance.
 
 {% tabs %}
 {% tab title="emit" %}
@@ -34,6 +34,31 @@ player.emit('yourEventName', 'arg1', 'arg2','arg3')
 // With this, you can emit event direct to player gui
 // this use the client as a bridge
 player.emitGui('yourEventName', 'arg1', 'arg2','arg3')
+```
+{% endtab %}
+
+{% tab title="Gui Interaction" %}
+```typescript
+// All this methods available on each player instance
+
+// RouteTo routeName inside webview
+player.guiRouteTo(routeName: string, ...args: any[])
+
+// Focus webview
+player.guiFocus();
+
+// Unfocus webview
+player.guiUnfocus();
+
+// Show cursor
+player.guiShowCursor();
+
+// Remove cursor
+player.guiRemoveCursor();
+
+// Remove all cursors
+player.guiRemoveAllCursors();
+
 ```
 {% endtab %}
 {% endtabs %}
