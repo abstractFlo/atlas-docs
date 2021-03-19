@@ -37,6 +37,7 @@
 * [LoggerService](shared/loggerservice.md)
 * [UtilsService](shared/utilsservice.md)
 * [Base Pool](shared/pools.md)
+* [TimerManagerService](shared/timermanagerservice.md)
 * [JSON Entity Model](shared/json-entity-model.md)
 
 ## External Links
