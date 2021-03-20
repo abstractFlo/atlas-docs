@@ -221,7 +221,8 @@ You can create a package.json file inside your folder. This is only needed one t
   
   # Enable if the import should be default or all(*)
   # e.g. import * as module from 'module'
-  useDefaultImport: false;
+  # default: false
+  useStartImport: false;
 }
 ```
 {% endtab %}
