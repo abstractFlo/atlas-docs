@@ -7,8 +7,7 @@ description: Learn more about the available ClientDecorators
 ## Basic Event Decorator
 
 {% hint style="info" %}
-Every basic event decorator can have an parameter for the eventname to be listen  
-If not provided, the name from decorated method would be use as eventname.
+Every basic event decorator has an optional parameter. If this parameter is not provided, the name of the decorated method will be used as the event name.
 {% endhint %}
 
 {% tabs %}
@@ -57,10 +56,10 @@ public youAwesomMethod(player: Player): void {
 
 ## Key Event Decorators
 
-Working with key events can become very confusing. This decorators help you focused on the funny part.
+Working with key events can be very confusing. The following decorators might help you while you can focus on the funny part.
 
 {% hint style="info" %}
-Key Event Decorators has one parameter, number or first char from name of the key
+Key Event Decorators has one parameter that is the number or first char from the name of the key
 {% endhint %}
 
 {% tabs %}
@@ -95,18 +94,18 @@ public doSomething(): void {
 
 ## GameEntity Decorators
 
-If you want to interact with GameEntity creation and destroying, then it can be really frustrating.  
-The framework helps you a lot with this. No worry only one event listener is created for this decorators.  
+Interacting with the game entity events like \(**gameEntityCreate** and **gameEntityDestroy**\) can be really annoying.  
+The framework helps you a lot with this. Don't worry, only one event listener will be created for these decorators.  
 You can use as many as you want without performance issues.
 
 {% hint style="warning" %}
-First param is an the string version for [BaseObjectType](https://docs.altv.mp/js/api/alt-client.BaseObjectType.html#fields).
+First parameter is a typeof [BaseObjectType](https://docs.altv.mp/js/api/alt-client.BaseObjectType.html#fields).
 {% endhint %}
 
 {% tabs %}
 {% tab title="@GameEntityCreate" %}
 ```typescript
-@GameEntityCreated('Player')
+@GameEntityCreated(BaseObjectType.Player)
 public doSomething(entity: Player): void {
     // You don't need to check the instance of the entity to fit your needs
     // the decorator does this job for you
@@ -116,7 +115,7 @@ public doSomething(entity: Player): void {
 
 {% tab title="@GameEntityDestroy" %}
 ```typescript
-@GameEntityDestroy('Player')
+@GameEntityDestroy(BaseObjectType.Player)
 public doSomething(entity: Player): void {
     // You don't need to check the instance of the entity to fit your needs
     // the decorator does this job for you
@@ -127,16 +126,16 @@ public doSomething(entity: Player): void {
 
 ## MetaChange Decorators
 
-Working with MetaChange \(**StreamSyncedMetaChange** and **SyncedMetaChange**\) is one of the most annoying part on development. This decorators helps you a lot. No headache, no brainfuck, it only works as you aspected.
+Working with MetaChange \(**StreamSyncedMetaChange** and **SyncedMetaChange**\) is one of the most annoying part while developing. These decorators will help you a lot. No headache, no brainfuck, it will work as you expect.
 
 {% hint style="warning" %}
-First param is an the string version for [BaseObjectType](https://docs.altv.mp/js/api/alt-client.BaseObjectType.html#fields).
+First parameter is a typeof [BaseObjectType](https://docs.altv.mp/js/api/alt-client.BaseObjectType.html#fields).
 {% endhint %}
 
 {% tabs %}
 {% tab title="@SyncedMetaChange" %}
 ```typescript
-@SyncedMetaChange('Player')
+@SyncedMetaChange(BaseObjectType.Player)
 public doSomethingSpecial(
     entity: Player, 
     key: string, 
@@ -147,7 +146,7 @@ public doSomethingSpecial(
     // Check for key you want
 }
 
-@SyncedMetaChange('Player', 'yourKey')
+@SyncedMetaChange(BaseObjectType.Player, 'yourKey')
 public doSomethingSpecial(entity: Player, newValue: any, oldValue: any): void {
     // Working with any meta change for a player entity
     // Only called if the yourKey is triggered.
@@ -158,7 +157,7 @@ public doSomethingSpecial(entity: Player, newValue: any, oldValue: any): void {
 
 {% tab title="@StreamSyncedMetaChange" %}
 ```typescript
-@StreamSyncedMetaChange('Player')
+@StreamSyncedMetaChange(BaseObjectType.Player)
 public doSomethingSpecial(
     entity: Player, 
     key: string, 
@@ -169,7 +168,7 @@ public doSomethingSpecial(
     // Check for key you want
 }
 
-@StreamSyncedMetaChange('Player', 'yourKey')
+@StreamSyncedMetaChange(BaseObjectType.Player, 'yourKey')
 public doSomethingSpecial(entity: Player, newValue: any, oldValue: any): void {
     // Working with any meta change for a player entity
     // Only called if the yourKey is triggered.
@@ -180,6 +179,6 @@ public doSomethingSpecial(entity: Player, newValue: any, oldValue: any): void {
 {% endtabs %}
 
 {% hint style="success" %}
-If you use the second parameter for your key, please notice that this key is not present anymore inside the method parameter map.
+If you use the second parameter as your key, please notice that this key won't be able to use inside the method parameter map anymore.
 {% endhint %}
 

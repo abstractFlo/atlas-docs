@@ -1,5 +1,5 @@
 ---
-description: This package can be used on both sides.
+description: Learn more about Shared
 ---
 
 # Shared

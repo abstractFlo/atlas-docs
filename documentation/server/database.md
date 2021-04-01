@@ -15,36 +15,110 @@ We don't teach you the interaction and creation of databases. If you have any qu
 
 ## How to use
 
-Using the DatabaseService is fairly simple. Only bootstrap the service and you're ready to go.
+Using the DatabaseService is fairly simple. Only add database entities and the service is starting for you.
 
+{% hint style="warning" %}
+If you don't need a database, remove **setupServerDatabaseEntities** from **bootstrap.ts**
+{% endhint %}
+
+{% tabs %}
+{% tab title="index.ts" %}
 ```typescript
-@Module()
-@singleton()
-export class ServerModule {
+import '@abraham/reflection';
+import './bootstrap';
+// ... other imports and stuff for server start
+```
+{% endtab %}
 
+{% tab title="bootstrap.ts" %}
+```typescript
+import { setupServerDatabaseEntities } from '@abstractFlo/shared';
+import { YourEntity } from 'path/to/your/your.entity';
+
+setupServerDatabaseEntities([
+  YourEntity
+]);
+```
+{% endtab %}
+
+{% tab title="example.component.ts" %}
+```typescript
+import { On } from '@abstractFlo/shared';
+import { ExampleService } from './example.service';
+
+export class ExampleComponent {
+  
   constructor(
-      private readonly databaseService: DatabaseService
+    private readonly exampleService: ExampleService
   ) {}
-
+  
   /**
-   * Initialize the database service
-   * 
-   * @param {Function} done
+   * Load entries sync
    */
-  @Before
-  public startDatabase(done: CallableFunction): void {
-    UtilsService.log('Starting ~y~DatabaseService~w~');
-
-    this.databaseService
-        .initialize()
-        .subscribe(() => {
-          UtilsService.log('Started ~lg~DatabaseService~w~');
-          done();
-        });
+  @On('yourEvent')
+  public loadAll(): void {
+    this.exampleService
+      .loadAll()
+      .then((yourEntities: YourEntity[]) => {
+        // Do whatever you want
+      })
+      .catch((err) => {
+        // Do what ever you want if error
+      })
+    
+  }
+  
+  /**
+   * Load entries async
+   */
+  @On('yourEvent')
+  public async loadAllAsync(): void {
+    try {
+      const yourEntities = await this.exampleService.loadAll();
+      
+      // do whatever you want
+    } catch(err) {
+      // do whatever you want if error
+    }
   }
 
 }
+
 ```
+{% endtab %}
+
+{% tab title="example.service.ts" %}
+```typescript
+import { injectable } from 'tsyringe';
+import { YourEntity } from './your.entity';
+import { getRepository, Repository } from 'typeorm';
+
+@injectable()
+export class ExampleService {
+
+  /**
+   * Get repository
+   *
+   * @type {Repository<YourEntity>}
+   * @protected
+   */
+  private repo: Repository<YourEntity> = getRepository(YourEntity);
+
+
+  /**
+   * Return all entries
+   *
+   * @return {Promise<YourEntity[]>}
+   */
+  public getAll(): Promise<YourEntity[]> {
+    return this.repo.find();
+  }
+  
+}
+
+```
+{% endtab %}
+{% endtabs %}
 
 {% hint style="success" %}
 If you're not familiar with TypeORM yet, feel free to check out our sample gamemode and see how we use it.

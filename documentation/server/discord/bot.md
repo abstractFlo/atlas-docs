@@ -6,18 +6,17 @@ description: Learn more about the Discord Bot
 
 ## Introduction
 
-Integrate a Discord Bot to your gamemode can have some benefits for you. Creating a whitelist, use the awesome
-permission layer from Discord itself for in-game actions, read some server stats, kick players and so on. The list can go
-further.
+Integrating a Discord bot to your gamemode can achieve some benefits for you. Creating a whitelist, use the awesome permission layer from Discord itself for in-game actions, read some server stats, kick players and so on. The list can go further.
 
-{% hint style="info" %} Creating your own bot cannot be simpler than this. {% endhint %}
+{% hint style="info" %}
+Creating your own bot cannot be simpler than this.
+{% endhint %}
 
 ## Setup the Bot
 
 ### Step 1
 
-Go to [https://discord.com/developers/applications](https://discord.com/developers/applications) and create an account
-and application if you do not already have on.
+Go to [https://discord.com/developers/applications](https://discord.com/developers/applications) and create an account and application if you do not already have on.
 
 ### Step 2
 
@@ -27,31 +26,32 @@ Visit the Page **Bot** and **Add Bot** or use an existing one.
 
 Store the Bot Token inside your `environment.json` and set it up based on the picture below.
 
-![Uncheck Public Bot and Check Privileged Gateway and Presence Intent](../../../.gitbook/assets/discord/intents.png)
+![Uncheck Public Bot and Check Privileged Gateway and Presence Intent](../../../.gitbook/assets/intents.png)
 
 ### Step 4
 
-Generate an OAuth URL and setup permissions for your bot, copy / paste it into your browser and invite The Bot to your Server.
+Generate an OAuth URL and setup permissions for your bot, copy and paste it into your browser and invite the bot to your server.
 
-![We prefer to check only the permissions you really want](../../../.gitbook/assets/discord/permissions_oauth.png)
+![We prefer to check only the permissions you really want](../../../.gitbook/assets/permissions_oauth.png)
 
-![Invite the bot to your server](../../../.gitbook/assets/discord/invite_the_bot.png)
+![Invite the bot to your server](../../../.gitbook/assets/invite_the_bot.png)
 
-{% hint style="success" %} That's all for the setup. The Framework does the rest for you. {% endhint %}
+{% hint style="success" %}
+That's all for the setup. The framework does the rest for you.
+{% endhint %}
 
 ## Example Usage
 
-This example does not demonstrate a real world example. It will only teach you the usage with the decorator and the
-interaction with the bot.
+This example is not a real world example. It will only show you the usage with the decorator and the interaction with the bot. To keep it simple as possible, there is a decorator for you to interact with the discord bot events.
 
-{% hint style="warning" %} To keep it simple as possible, there is a decorator for you to interact with bot events.  
-Any available bot event from [discord.js](https://discord.js.org/#/) are also useable with the decorator. The event
-params would be moved to the method.
+Any available bot event from [discord.js](https://discordjs.guide/) are also useable with the decorator. The event params will be moved to the method.
 
-Keep in mind, the decorator is only available server side {% endhint %}
+{% hint style="warning" %}
+Keep in mind, the decorator is only available server side
+{% endhint %}
 
-{% tabs %} {% tab title="Listen for GuildMemberUpdate" %}
-
+{% tabs %}
+{% tab title="Listen for GuildMemberUpdate" %}
 ```typescript
 export class MyComponent {
 
@@ -69,6 +69,6 @@ export class MyComponent {
 
 }
 ```
-
-{% endtab %} {% endtabs %}
+{% endtab %}
+{% endtabs %}
 

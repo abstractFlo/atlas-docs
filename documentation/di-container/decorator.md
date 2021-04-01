@@ -38,7 +38,7 @@ resolve1 !== resolve2;
 
 ## Custom DI Decorators
 
-We created some custom decorators to interact with the di-container. This decorators are needed for internal work. The entire framework uses many shared classes and helpers on both sides. The decorators help us to connect the server and client with the shared classes.
+We created some custom decorators to interact with the di-container. They are needed for internal work. The entire framework uses many shared classes and helpers on both sides. The decorators help us to connect the server and client with the shared classes.
 
 {% hint style="danger" %}
 Every custom decorator must be declared after the tsyringe decorator
@@ -92,12 +92,12 @@ export class SecondComponent{}
 {% endtabs %}
 
 {% hint style="success" %}
-The example above shows you the magic. Only one line of code for import. Resolve the module from container, autoload all other declared modules and components. This keep your code clean and good looking.
+The example above shows you the magic. Only one line of code for import. Resolve the module from container, autoload all other declared modules and components. This keep your code clean and good-looking.
 {% endhint %}
 
 ### @StringResolver
 
-The **@StringResolver** registers the decorated class as a String InjectionToken inside the decorator.  
+The **@StringResolver** registers the decorated class as a string InjectionToken inside the DI-container.  
 This is needed if you want to resolve a class based on the string constructor name
 
 {% hint style="info" %}
