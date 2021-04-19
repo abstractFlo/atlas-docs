@@ -33,12 +33,12 @@ export const FrameworkEvent = {
 
 ```typescript
 import { singleton } from 'tsyringe';
-import { FrameworkEvent} from '@abstractFlo/shared';
+import { FrameworkEvent } from '@abstractFlo/shared';
 import { OnServer} from '@abstractFlo/client';
 
 
 @singleton()
-export class YourComponent{
+export class YourComponent {
 
   /**
    * This event is called, if the discord auth is done by server

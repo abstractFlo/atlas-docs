@@ -88,7 +88,7 @@ public task(done: CallableFunction): void {
 ```
 {% endtab %}
 
-{% tab title="@AutloadBefore" %}
+{% tab title="@AutoloadBefore" %}
 ```typescript
 // Load yourMethod before the bootstrap is started with a available timeout
 // about 10000ms
@@ -98,12 +98,11 @@ export class YourFile {
     public yourMethod(done: CallableFunction): void {
         done();
     }
-
 }
 ```
 {% endtab %}
 
-{% tab title="AutloadAfter" %}
+{% tab title="AutoloadAfter" %}
 ```typescript
 // Load yourMethod after the bootstrap is complete with a available timeout
 // about 10000ms
@@ -113,7 +112,6 @@ export class YourFile {
     public yourMethod(done: CallableFunction): void {
         done();
     }
-
 }
 ```
 {% endtab %}
