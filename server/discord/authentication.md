@@ -54,8 +54,7 @@ This is the Server side integration for Discord authentication
 {% tabs %}
 {% tab title="auth.component.ts" %}
 ```typescript
-import { singleton } from 'tsyringe';
-import { FrameworkEvent, On } from '@abstractFlo/atlas-shared';
+import { FrameworkEvent, On, Component } from '@abstractFlo/atlas-shared';
 import { Player } from 'alt-server';
 import {
   DiscordApiService,
@@ -122,11 +121,10 @@ Client side integration for Discord authentication
 {% tabs %}
 {% tab title="auth.component.ts" %}
 ```typescript
-import { singleton } from 'tsyringe';
-import { FrameworkEvent, On } from '@abstractFlo/atlas-shared';
+import { FrameworkEvent, On, Component } from '@abstractFlo/atlas-shared';
 import { OnGui, OnServer, WebviewService } from '@abstractFlo/atlas-client';
 
-@singleton()
+@Component()
 export class AuthComponent {
 
   /**
