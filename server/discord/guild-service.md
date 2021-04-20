@@ -29,6 +29,7 @@ You can use any method you find in the [discord.js](https://discord.js.org/#/doc
 ```typescript
 // If you extend the guild service, your class has access to
 // this.guild => this is your own server
+@Component()
 export class YourBotComponent extends GuildService {
 
   /**

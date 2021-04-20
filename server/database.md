@@ -137,6 +137,7 @@ export class YourEntity {
 import { On } from '@abstractFlo/shared';
 import { ExampleService } from './example.service';
 
+@Component()
 export class ExampleComponent {
 
   constructor(

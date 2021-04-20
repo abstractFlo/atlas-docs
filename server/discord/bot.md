@@ -53,6 +53,7 @@ Keep in mind, the decorator is only available server side
 {% tabs %}
 {% tab title="Listen for GuildMemberUpdate" %}
 ```typescript
+@Component()
 export class MyComponent {
 
   /**

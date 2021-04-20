@@ -288,7 +288,6 @@ The Usage is very simple, get the Service from DI-Container and create your time
 ```typescript
 import { TimerManagerService } from '@abstractflo/atlas-shared';
 
-
 @Component()
 export class YourComponent {
 
@@ -315,7 +314,6 @@ export class YourComponent {
 ```typescript
 import { TimerManagerService } from '@abstractflo/atlas-shared';
 
-
 @Component()
 export class OtherComponent {
 
@@ -340,7 +338,6 @@ For easier handling, we've create a @Interval Decorator. You can decorate every 
 
 ```typescript
 import { Interval, TimerManagerService } from '@abstractflo/atlas-shared';
-
 
 @Component()
 export class YourComponent {

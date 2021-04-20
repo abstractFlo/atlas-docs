@@ -134,7 +134,7 @@ this.webviewService.focus();
 this.webviewService.unfocus();
 ```
 
-## Net to know
+## Side notes
 
 You can combine any method like a chain.
 
