@@ -41,6 +41,10 @@ This is a simple integration inside the connection process for your gamemode. Yo
 This section describes the usage of our products on each side. This means our framework for server/client and [our CEF implementation with svelte](https://github.com/abstractFlo/altv-svelte-tailwind-typescript). If you have a different setup on CEF side, you can port the Svelte part to your preferred solution.
 {% endhint %}
 
+{% hint style="danger" %}
+Keep in mind, this is only an example. The player properties for **discordToken, pendingLogin** and **discord** does not exists inside framework or [starter-template](https://github.com/abstractFlo/atlas-starter). You must [extend ](../extends.md#alt-player)the player by yourself.
+{% endhint %}
+
 ### Server
 
 {% hint style="info" %}
