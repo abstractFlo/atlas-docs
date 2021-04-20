@@ -39,7 +39,7 @@ This section describes the usage of our products on each side. This means our fr
 {% endhint %}
 
 {% hint style="danger" %}
-Keep in mind, this is only an example. The player properties for **discordToken, pendingLogin** and **discord** does not exists inside framework or [starter-template](https://github.com/abstractFlo/atlas-starter). You must [extend ](../extends.md#alt-player)the player by yourself.
+Keep in mind, this is only an example. The player properties for **discordToken, pendingLogin, tokenData** and **discord** does not exists inside framework or [starter-template](https://github.com/abstractFlo/atlas-starter). You must [extend ](../extends.md#alt-player)the player by yourself.
 {% endhint %}
 
 ### Server
