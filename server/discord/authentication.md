@@ -118,7 +118,7 @@ Client side integration for Discord authentication
 {% tabs %}
 {% tab title="auth.component.ts" %}
 ```typescript
-import { FrameworkEvent, On, Component } from '@abstractFlo/atlas-shared';
+import { FrameworkEvent, Component } from '@abstractFlo/atlas-shared';
 import { OnGui, OnServer, WebviewService } from '@abstractFlo/atlas-client';
 
 @Component()
