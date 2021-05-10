@@ -2,7 +2,7 @@
 description: All informations about folder structure used by us
 ---
 
-# Folder Structure
+# Folder Structure - Simple explained
 
 ## Introduction
 

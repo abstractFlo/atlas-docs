@@ -42,7 +42,7 @@
 
 ## Examples
 
-* [Folder Structure - Simple explained](examples/folder-structure.md)
+* [Folder Structure](examples/folder-structure.md)
 
 ## External Links
 
