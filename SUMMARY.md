@@ -50,5 +50,5 @@
 
 ## Examples
 
-* [Folder Structure](examples/folder-structure.md)
+* [Folder Structure - Simple explained](examples/folder-structure.md)
 
