@@ -1,8 +1,8 @@
 ---
-description: All informations about the folder structure used by us
+description: All informations about folder structure used by us
 ---
 
-# Folder Structure - Simple explained
+# Folder Structure
 
 ## Introduction
 
