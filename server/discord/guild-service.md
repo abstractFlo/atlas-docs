@@ -14,6 +14,10 @@ Wishes and ideas can be posted inside [\#ideas-and-features](https://discord.gg/
 
 ## Basic Usage
 
+{% hint style="danger" %}
+Actually not implemented!
+{% endhint %}
+
 Working with the guild service is fairly simple. Create a new class and extend the guild service.
 
 {% hint style="success" %}
@@ -25,6 +29,7 @@ You can use any method you find in the [discord.js](https://discord.js.org/#/doc
 ```typescript
 // If you extend the guild service, your class has access to
 // this.guild => this is your own server
+@Component()
 export class YourBotComponent extends GuildService {
 
   /**

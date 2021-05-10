@@ -24,7 +24,7 @@ Visit the Page **Bot** and **Add Bot** or use an existing one.
 
 ### Step 3
 
-Store the Bot Token inside your `environment.json` and set it up based on the picture below.
+Store the Bot Token inside your `.env` and set it up based on the picture below.
 
 ![Uncheck Public Bot and Check Privileged Gateway and Presence Intent](../../.gitbook/assets/intents.png)
 
@@ -53,6 +53,7 @@ Keep in mind, the decorator is only available server side
 {% tabs %}
 {% tab title="Listen for GuildMemberUpdate" %}
 ```typescript
+@Component()
 export class MyComponent {
 
   /**

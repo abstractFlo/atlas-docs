@@ -19,18 +19,18 @@ The only thing you should do, is set up the webview registry. The first argument
 {% tabs %}
 {% tab title="bootstrap.ts" %}
 ```typescript
-import { setupWebviewRegistry } from '@abstractFlo/shared';
+import { registerWebview } from '@abstractFlo/atlas-client';
 
 // other stuff inside bootstrap.ts
-setupWebviewRegistry('http://your/path/to/your/webview', 'routeEventName');
+registerWebview('http://your/path/to/your/webview', 'routeEventName');
 ```
 {% endtab %}
 
 {% tab title="your.component.ts" %}
 ```typescript
 import { singleton } from 'tsyringe';
-import { On } from '@abstractFlo/shared';
-import { WebviewService } from '@abstractFlo/client';
+import { On } from '@abstractFlo/atlas-shared';
+import { WebviewService } from '@abstractFlo/atlas-client';
 
 @singleton()
 export class PlayerAuthComponent {
@@ -134,7 +134,7 @@ this.webviewService.focus();
 this.webviewService.unfocus();
 ```
 
-## Net to know
+## Side notes
 
 You can combine any method like a chain.
 

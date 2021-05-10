@@ -2,8 +2,7 @@
 
 * [Introduction](README.md)
 * [Installation](installation/README.md)
-  * [Docker Template](installation/docker-template.md)
-  * [Vanilla Template](installation/vanilla-template.md)
+  * [Starting Template](installation/docker-template.md)
 * [FAQ](faq.md)
 
 ## Basic Knowledge
@@ -17,7 +16,6 @@
 
 ## Server
 
-* [Configuration](server/configuration.md)
 * [Database](server/database.md)
 * [Event Service](server/eventservice.md)
 * [Discord](server/discord/README.md)
@@ -39,6 +37,7 @@
 * [LoggerService](shared/loggerservice.md)
 * [UtilsService](shared/utilsservice.md)
 * [Base Pool](shared/pools.md)
+* [TimerManagerService](shared/timermanagerservice.md)
 * [JSON Entity Model](shared/json-entity-model.md)
 
 ## External Links

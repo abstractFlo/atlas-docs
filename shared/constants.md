@@ -32,12 +32,10 @@ export const FrameworkEvent = {
 ### Example
 
 ```typescript
-import { singleton } from 'tsyringe';
-import { FrameworkEvent} from '@abstractFlo/shared';
-import { OnServer} from '@abstractFlo/client';
+import { FrameworkEvent } from '@abstractFlo/atlas-shared';
+import { OnServer } from '@abstractFlo/atlas-client';
 
-
-@singleton()
+@Component()
 export class YourComponent{
 
   /**
