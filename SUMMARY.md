@@ -48,3 +48,7 @@
 * [Atlas Starter Templates](https://github.com/abstractFlo/atlas-starter)
 * [Svelte CEF Template](https://github.com/abstractFlo/altv-svelte-tailwind-typescript)
 
+## Examples
+
+* [Folder Structure](examples/folder-structure.md)
+

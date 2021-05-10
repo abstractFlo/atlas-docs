@@ -6,7 +6,7 @@ description: Learn more about the TimerManagerService
 
 ## Introduction
 
-Working with timers can be anoying if you forgot to clear the timers after job is done. To make your life easier, we have create a TimerManagerService. With this service, you can create timers every where in your gamemode and clear them out on other location. 
+Working with timers can be anoying if you forgot to clear the timers after job is done. To make your life easier, we have create a TimerManagerService. With this service, you can create timers every where in your gamemode and clear them out on other location.
 
 This is solved by a simple ES6 Map. You declare a name and your callback and now you are done.  
 You can retrieve the timer back by its name and clear them out.
@@ -224,7 +224,6 @@ export class TimerManagerService {
     UtilsService.logRegisteredHandlers('TimerManagerService', timerCount);
   }
 }
-
 ```
 
 ### Available Methods
@@ -306,7 +305,6 @@ export class YourComponent {
     )
   }
 }
-
 ```
 {% endtab %}
 
@@ -325,7 +323,6 @@ export class OtherComponent {
     this.timerManagerService.clearTimer('nameYourInterval');
   }
 }
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -345,7 +342,7 @@ export class YourComponent {
     constructor(
       private readonly timerManagerService: TimerManagerService
   ) {}
-  
+
   @Interval('nameYourInterval', 1000)
   public foo(): void {
     // Do what ever you want

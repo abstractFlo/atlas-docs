@@ -31,7 +31,7 @@ npm install
 
 ### Step 2.1
 
-We love mysql &lt;3, thats why our Docker Template shipped out with a mysql service. You can change this to what ever you want but for fast startup you can use as it is. 
+We love mysql &lt;3, thats why our Docker Template shipped out with a mysql service. You can change this to what ever you want but for fast startup you can use as it is.
 
 If you want using mysql please install the mysql dependency as well.
 
@@ -218,7 +218,7 @@ You can create a package.json file inside your folder. This is only needed one t
   # Define all modules they would converted to default import
   # this is most time not needed
   "convert": []
-  
+
   # Enable if the import should be default or all(*)
   # e.g. import * as module from 'module'
   # default: false

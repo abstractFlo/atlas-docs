@@ -20,7 +20,7 @@ Go to [https://discord.com/developers/applications](https://discord.com/develope
 
 #### Step 2
 
-Visit the **OAuth2** Page and store the **Client ID** and **Client Secret** inside your `.env`    
+Visit the **OAuth2** Page and store the **Client ID** and **Client Secret** inside your `.env`  
 Setup the redirect URL and press save.  
 This URL must be set inside `.env` under `DISCORD_REDIRECT_URL` too.
 

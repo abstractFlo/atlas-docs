@@ -58,7 +58,6 @@ player.guiRemoveCursor();
 
 // Remove all cursors
 player.guiRemoveAllCursors();
-
 ```
 {% endtab %}
 {% endtabs %}
