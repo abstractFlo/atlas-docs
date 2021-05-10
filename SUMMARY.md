@@ -40,6 +40,10 @@
 * [TimerManagerService](shared/timermanagerservice.md)
 * [JSON Entity Model](shared/json-entity-model.md)
 
+## Examples
+
+* [Folder Structure - Simple explained](examples/folder-structure.md)
+
 ## External Links
 
 * [alt:V Official](https://altv.mp)
@@ -47,8 +51,4 @@
 * [Atlas Framework](https://github.com/abstractFlo/atlas)
 * [Atlas Starter Templates](https://github.com/abstractFlo/atlas-starter)
 * [Svelte CEF Template](https://github.com/abstractFlo/altv-svelte-tailwind-typescript)
-
-## Examples
-
-* [Folder Structure - Simple explained](examples/folder-structure.md)
 
