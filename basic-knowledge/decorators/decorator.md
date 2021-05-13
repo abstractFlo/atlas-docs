@@ -61,7 +61,7 @@ Only the first parameter is required to identify the triggered colShape. If you 
 // Would be triggered if colshape is cylinder with name myColShape 
 // and the entity is a player
 @EntityEnterColShape(ColShapeType.Cylinder, 'myColShape', BaseObjectType.Player)
-public testEnter1(colshape: Colshape, entity: Entity): void {
+public testEnter1(colshape: Colshape, player: Player): void {
   UtilsService.log('cylinder, myColShape, player');
 }
 
@@ -84,7 +84,7 @@ public testEnter3(colshape: Colshape, entity: Entity): void {
 // Would be triggered if colshape is cylinder with name myColShape 
 // and the entity is a player
 @EntityLeaveColShape(ColShapeType.Cylinder, 'myColShape', BaseObjectType.Player)
-public testLeave1(colshape: Colshape, entity: Entity): void {
+public testLeave1(colshape: Colshape, player: Player): void {
   UtilsService.log('cylinder, myColShape, player');
 }
 

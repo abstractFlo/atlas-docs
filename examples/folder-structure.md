@@ -2,7 +2,7 @@
 description: All informations about folder structure used by us
 ---
 
-# Folder Structure - Simple explained
+# Folder Structure
 
 ## Introduction
 
@@ -34,7 +34,7 @@ import { Module } from '@abstractflo/atlas-shared';
  */
 @Module()
 export class AuthenticationModule {
-  
+
 }
 ```
 {% endtab %}
@@ -48,7 +48,6 @@ import { AuthenticationModule } from '../../authentication/server/authentication
   imports: [AuthenticationModule]
 })
 export class ServerModule {}
-
 ```
 {% endtab %}
 {% endtabs %}
