@@ -65,7 +65,7 @@ Rename **docker.compose.example.yml** to **docker-compose.yml** and change this 
 SERVER_BRANCH=rc
 
 # Where to store the builded files
-ATLAS_BUILD_OUPUT=dist
+ATLAS_BUILD_OUTPUT=dist
 
 # Clear the build dir before new build is triggered
 # only for build not for watch
