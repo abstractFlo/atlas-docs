@@ -262,9 +262,12 @@ This folder contains all your ready to use resources like maps, cars, weapons an
 You can prevent some resources for copying by adding an underscore prefix.
 
 ```bash
-+ yourMap // copy to resources/yourMap
-+ yourCar // copy to resources/yourCar1
-+ yourWeapon // copy to resources/yourWeapon
++ yourMap // copy to yourMap
++ yourCar // copy to yourCar1
++ yourWeapon // copy to yourWeapon
++ resources/yourMap // copy to resources/yourMap
++ resources/yourCar // copy to resources/yourCar
++ resources/yourWeapon // copy to resources/yourWeapon
 + _notCopied // prevent copy
 ```
 
