@@ -37,7 +37,7 @@ export class FirstEntity {
 
   @Column()
   name: string;
-  
+
   @OneToMany(() => Second, second => second.first)
   seconds: Second[]
 }
@@ -54,7 +54,7 @@ export class FirstEntity {
 
   @Column()
   name: string;
-  
+
   @OneToMany(() => Second, second => second.first)
   seconds: 'Second'[]
 }
@@ -75,7 +75,7 @@ export class SecondEntity {
 
   @Column()
   name: string;
-  
+
   @ManyToOne(() => First, first => first.seconds)
   first: First
 }
@@ -92,7 +92,7 @@ export class SecondEntity {
 
   @Column()
   name: string;
-  
+
   @ManyToOne(() => First, first => first.seconds)
   first: 'First'
 }
@@ -102,7 +102,7 @@ export class SecondEntity {
 
 #### Another solution that works but also does not feel perfect
 
-You can create an entry point file for your models and define the exports in the right order. I feels not really  good, but you don't lose the Typings. We don't know how complicated it is with more and more models. But try and error can solve the problem with the right order.
+You can create an entry point file for your models and define the exports in the right order. I feels not really good, but you don't lose the Typings. We don't know how complicated it is with more and more models. But try and error can solve the problem with the right order.
 
 You can see a working example on the picture below. Keep in mind, if you change the order inside `index.ts` they would not work anymore
 
@@ -137,6 +137,7 @@ export class YourEntity {
 import { On } from '@abstractFlo/shared';
 import { ExampleService } from './example.service';
 
+@Component()
 export class ExampleComponent {
 
   constructor(

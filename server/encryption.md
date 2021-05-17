@@ -11,6 +11,7 @@ We have a simple encryption service powered by [sjcl](http://bitwiseshiftleft.gi
 ## Base Usage
 
 ```typescript
+@Component()
 export class YourComponent {
 
     // Persistent SHA256 Hash

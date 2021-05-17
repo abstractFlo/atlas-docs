@@ -20,11 +20,8 @@ Go to [https://discord.com/developers/applications](https://discord.com/develope
 
 #### Step 2
 
-Visit the **General Information** Page and store the **Client ID** and **Client Secret** inside your `.env`
-
-#### Step 3
-
-Go to OAuth 2 and set up the redirect URL and press save.  
+Visit the **OAuth2** Page and store the **Client ID** and **Client Secret** inside your `.env`  
+Setup the redirect URL and press save.  
 This URL must be set inside `.env` under `DISCORD_REDIRECT_URL` too.
 
 ![Add Redirect URL](../../.gitbook/assets/authorization_redirect.png)
@@ -41,6 +38,10 @@ This is a simple integration inside the connection process for your gamemode. Yo
 This section describes the usage of our products on each side. This means our framework for server/client and [our CEF implementation with svelte](https://github.com/abstractFlo/altv-svelte-tailwind-typescript). If you have a different setup on CEF side, you can port the Svelte part to your preferred solution.
 {% endhint %}
 
+{% hint style="danger" %}
+Keep in mind, this is only an example. The player properties for **discordToken, pendingLogin, tokenData** and **discord** does not exists inside framework or [starter-template](https://github.com/abstractFlo/atlas-starter). You must [extend ](../extends.md#alt-player)the player by yourself.
+{% endhint %}
+
 ### Server
 
 {% hint style="info" %}
@@ -50,17 +51,16 @@ This is the Server side integration for Discord authentication
 {% tabs %}
 {% tab title="auth.component.ts" %}
 ```typescript
-import { singleton } from 'tsyringe';
-import { DiscordUserModel, FrameworkEvent, On } from '@abstractFlo/shared';
+import { FrameworkEvent, On, Component } from '@abstractFlo/atlas-shared';
 import { Player } from 'alt-server';
-import { ScriptEvent } from '@shared/constants';
 import {
   DiscordApiService,
+  DiscordUserModel,
   EncryptionService,
   OnClient
-} from '@abstractFlo/server';
+} from '@abstractFlo/atlas-server';
 
-@singleton()
+@Component()
 export class AuthComponent {
 
   constructor(
@@ -118,11 +118,10 @@ Client side integration for Discord authentication
 {% tabs %}
 {% tab title="auth.component.ts" %}
 ```typescript
-import { singleton } from 'tsyringe';
-import { FrameworkEvent, On } from '@abstractFlo/shared';
-import { OnGui, OnServer, WebviewService } from '@abstractFlo/client';
+import { FrameworkEvent, Component } from '@abstractFlo/atlas-shared';
+import { OnGui, OnServer, WebviewService } from '@abstractFlo/atlas-client';
 
-@singleton()
+@Component()
 export class AuthComponent {
 
   /**

@@ -21,6 +21,7 @@ We created a method to simple route inside your SPA
 {% tabs %}
 {% tab title="routeTo" %}
 ```typescript
+@Component()
 export class YourComponent {
 
     /**

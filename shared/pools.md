@@ -113,7 +113,7 @@ export abstract class BasePool<T, K = string | number> {
 {% tabs %}
 {% tab title="player.pool.ts" %}
 ```typescript
-import { BasePool } from '@abstractFlo/shared';
+import { BasePool } from '@abstractFlo/atlas-shared';
 import { Player } from 'alt-client';
 import { singleton } from 'tsyringe';
 
@@ -126,9 +126,8 @@ export class PlayerPool extends BasePool<Player, string> {}
 ```typescript
 import { Player } from 'alt-client';
 import { PlayerPool } from './player.pool';
-import { singleton } from 'tsyringe';
 
-@singleton()
+@Component()
 export class PlayerComponent {
 
   constructor(

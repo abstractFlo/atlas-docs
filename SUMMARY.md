@@ -40,6 +40,10 @@
 * [TimerManagerService](shared/timermanagerservice.md)
 * [JSON Entity Model](shared/json-entity-model.md)
 
+## Examples
+
+* [Folder Structure](examples/folder-structure.md)
+
 ## External Links
 
 * [alt:V Official](https://altv.mp)

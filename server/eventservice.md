@@ -19,6 +19,7 @@ We use the same method signature as alt:V. If you are already familiar with it, 
 {% tabs %}
 {% tab title="emit" %}
 ```typescript
+@Component()
 export class MyComponent {
 
     constructor(
@@ -36,6 +37,7 @@ export class MyComponent {
 
 {% tab title="emitClient" %}
 ```typescript
+@Component()
 export class MyComponent {
 
     constructor(
@@ -69,6 +71,7 @@ Internally, we use the client as a bridge. There is no magic, only an event that
 {% tabs %}
 {% tab title="emitGui" %}
 ```typescript
+@Component()
 export class MyComponent {
 
     constructor(
@@ -98,6 +101,7 @@ The event service also has methods for retrieving events. If you're using the de
 {% tabs %}
 {% tab title="on" %}
 ```typescript
+@Component()
 export class YourComponent {
 
     constructor(
@@ -113,6 +117,7 @@ export class YourComponent {
 
 {% tab title="once" %}
 ```typescript
+@Component()
 export class YourComponent {
 
     constructor(
@@ -128,6 +133,7 @@ export class YourComponent {
 
 {% tab title="onClient" %}
 ```typescript
+@Component()
 export class YourComponent {
 
     constructor(
@@ -143,6 +149,7 @@ export class YourComponent {
 
 {% tab title="onceClient" %}
 ```typescript
+@Component()
 export class YourComponent {
 
     constructor(
@@ -166,6 +173,7 @@ We provide some other methods for **offServer** and **off** Eventlistener.
 ```typescript
 // Keep in mind, offServer need the same function context as onClient to remove
 // the eventListener
+@Component()
 export class YourComponent {
 
     constructor(
@@ -183,6 +191,7 @@ export class YourComponent {
 ```typescript
 // Keep in mind, offServer need the same function context as on to remove
 // the eventListener
+@Component()
 export class YourComponent {
 
     constructor(
