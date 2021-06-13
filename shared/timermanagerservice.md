@@ -329,9 +329,9 @@ export class OtherComponent {
 
 ## Decorators
 
-For easier handling, we've create a @Interval Decorator. You can decorate every method and this method would be executed for the interval time after the framework is booted.
-
 #### @Interval\(name: string, duration: number\)
+
+For easier handling, we've create a @Interval Decorator. You can decorate every method and this method would be executed for the interval time after the framework is booted.
 
 ```typescript
 import { Interval, TimerManagerService } from '@abstractflo/atlas-shared';
@@ -346,6 +346,27 @@ export class YourComponent {
   @Interval('nameYourInterval', 1000)
   public foo(): void {
     // Do what ever you want
+  }
+}
+```
+
+#### @EveryTick\(name: string\)
+
+```typescript
+import { EveryTick, TimerManagerService } from '@abstractflo/atlas-shared';
+
+@Component()
+export class YourComponent {
+
+    constructor(
+      private readonly timerManagerService: TimerManagerService
+  ) {}
+
+  @EveryTick('yourEveryTickName')
+  public foo(): void {
+    // Do what ever you want in everyTick
+    // You can remove the timer by calling 
+    // this.timerManagerService.clearRunningTimer('yourEveryTickName')
   }
 }
 ```
